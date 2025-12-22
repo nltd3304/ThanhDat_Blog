@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Array & Object - Cách Mình Quản Lý "Kho Báu" Dữ Liệu | Blog Thành Đạt</title>
+    <meta name="description" content="Khám phá cách lưu trữ dữ liệu thông minh trong JavaScript thông qua Array và Object. Nhật ký học tập từ khóa học Cisco Essentials 1.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 3: Array & Object - Cách Mình Quản Lý "Kho Báu" Dữ Liệu</h1>  
+
+                <div class="post-meta">
+                    <span class="meta-item">📅 12 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="assets/img/blog3-featured.jpg" alt="Học về Array và Object trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#array">1. Array: Danh sách đi chợ của lập trình viên</a></li>
+                        <li><a href="#object">2. Object: Mô tả thế giới thực bằng Code</a></li>
+                        <li><a href="#combine">3. Khi Array gặp Object: Sức mạnh thực sự</a></li>
+                        <li><a href="#sai-lam">4. Lỗi Index 0: Bài học "vỡ lòng" của sinh viên</a></li>
+                        <li><a href="#ket-luan">5. Cảm nhận: Tư duy hệ thống dần hình thành</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="array">1. Array: Danh sách đi chợ của lập trình viên</h2>
+                    <p>Hãy tưởng tượng bạn có danh sách 100 tên sinh viên. Bạn không thể khai báo <code>let sv1, sv2, sv3...</code> đến tận 100 được. Đó là lý do <strong>Array (Mảng)</strong> ra đời. </p>
+                    <p>Trong khóa học của Cisco, mình học được cách mảng hoạt động như một dãy các ngăn tủ. Mỗi ngăn tủ có một con số gọi là <strong>Index</strong>. Điều thú vị là các ngăn tủ này có thể chứa bất cứ thứ gì, từ số, chữ cho đến một mảng khác!</p>
+
+                    
+
+                    <h2 id="object">2. Object: Mô tả thế giới thực bằng Code</h2>
+                    <p>Nếu Array là một danh sách, thì <strong>Object (Đối tượng)</strong> giống như một quyển hồ sơ. Thay vì gọi theo số thứ tự 0, 1, 2, mình gọi theo tên thuộc tính (Key).</p>
+                    <p>Ví dụ, để mô tả chính mình, mình dùng Object:</p>
+                    <pre>
+                        <code>
+let sinhVien = {
+    ten: "Thành Đạt",
+    tuoi: 20,
+    chuyenNganh: "CNTT",
+    dangHoc: true
+};
+                        </code>
+                    </pre>
+                    <p>Cách tiếp cận này của Cisco giúp mình hiểu rằng lập trình thực chất là việc chúng ta "số hóa" những thực thể ở đời thực vào trong máy tính.</p>
+
+                    <h2 id="combine">3. Khi Array gặp Object: Sức mạnh thực sự</h2>
+                    <p>Đây là lúc mọi thứ trở nên thú vị. Trong các bài Lab, mình phải quản lý một mảng chứa nhiều đối tượng (An Array of Objects). Đây chính là cách mà các trang web hiện đại như Facebook hay Shopee hiển thị danh sách bài viết hoặc sản phẩm của họ.</p>
+                    
+                    
+
+                    <h2 id="sai-lam">4. Lỗi Index 0: Bài học "vỡ lòng" của sinh viên</h2>
+                    <p>Một sai lầm "kinh điển" mà mình và các bạn trong lớp hay mắc phải là quên mất mảng bắt đầu từ số <strong>0</strong> chứ không phải số 1. </p>
+                    <p>Đã bao nhiêu lần mình cố truy cập phần tử cuối cùng của mảng <code>arr[arr.length]</code> và nhận về <code>undefined</code>? Câu trả lời đúng phải là <code>arr[arr.length - 1]</code>. Khóa học Cisco rất khắt khe trong việc kiểm tra các bài Lab này, giúp mình rèn được tính tỉ mỉ khi xử lý dữ liệu.</p>
+
+                    <h2 id="ket-luan">5. Cảm nhận: Tư duy hệ thống dần hình thành</h2>
+                    <p>Sau bài 3, mình cảm thấy mình không còn là một người gõ code vu vơ nữa. Mình bắt đầu biết cách tổ chức dữ liệu sao cho gọn gàng, khoa học. Đây là nền tảng cực kỳ quan trọng để sau này mình học về Cơ sở dữ liệu (Database) hoặc làm việc với API.</p>
+                    <p>Bài học tiếp theo sẽ là về <strong>Function</strong> - nơi chúng ta biến những đoạn code rời rạc thành những "cỗ máy" có thể tái sử dụng. Đừng bỏ lỡ nhé!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #ff9800;">
+                    <h4>👨‍🎓 Góc nhỏ của Đạt</h4>
+                    <p>Mảng và Đối tượng là hai "vũ khí" lợi hại nhất mà mình học được cho đến nay. Bạn thích dùng mảng hay đối tượng hơn? Hãy cho mình biết ở phần bình luận nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog2.html" style="text-decoration: none; color: #666;">← Bài 2: Khi Code Biết "Tư Duy"</a>
+                    <a href="Blog4.html" style="background: #ff9800; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 4 - Hàm (Function) &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = 'index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

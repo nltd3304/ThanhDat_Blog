@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Hàm (Function) - Đừng Lặp Lại Chính Mình | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 1: Tìm hiểu về Function, tham số, giá trị trả về và nguyên tắc DRY để viết code sạch hơn.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 4: Hàm (Function) - Nghệ Thuật Đóng Gói Và Tái Sử Dụng</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 13 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="assets/img/blog4-featured.jpg" alt="Minh họa về Function trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#dry">1. Nguyên tắc DRY: Đừng là chiếc máy photocopy</a></li>
+                        <li><a href="#anatomy">2. Cấu tạo của một hàm: Input, Process và Output</a></li>
+                        <li><a href="#arrow">3. Arrow Function: Cách viết "cool" của dân Pro</a></li>
+                        <li><a href="#scope">4. Local vs Global Scope: Biến này của ai?</a></li>
+                        <li><a href="#ket-luan">5. Lời kết: Code ít hơn, làm được nhiều hơn</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="dry">1. Nguyên tắc DRY: Đừng là chiếc máy photocopy</h2>
+                    <p>Trong tuần học vừa rồi trên NetAcad, mình gặp một bài tập yêu cầu tính thuế cho 10 loại mặt hàng khác nhau. Lúc đầu, mình định copy-paste đoạn công thức tính thuế 10 lần. Nhưng dừng lại một chút, mình nhớ đến nguyên tắc <strong>DRY (Don't Repeat Yourself)</strong> mà thầy giáo hay nhắc.</p>
+                    <p>Hàm (Function) ra đời để giải quyết việc này. Thay vì viết lại logic, mình chỉ cần định nghĩa nó một lần và gọi tên nó bất cứ khi nào cần. Nó giống như việc bạn chế tạo một cái khuôn làm bánh, từ đó bạn có thể tạo ra hàng nghìn chiếc bánh giống hệt nhau mà không cần nhào bột lại từ đầu.</p>
+
+                    <h2 id="anatomy">2. Cấu tạo của một hàm: Input, Process và Output</h2>
+                    <p>Khóa học Cisco chia nhỏ hàm ra thành các thành phần cực kỳ dễ hiểu. Hãy tưởng tượng hàm như một cái máy xay sinh tố:</p>
+                    <ul>
+                        <li><strong>Parameters (Tham số):</strong> Là trái cây bạn bỏ vào máy (Input).</li>
+                        <li><strong>Body (Thân hàm):</strong> Là lưỡi dao đang xay nhuyễn trái cây (Process).</li>
+                        <li><strong>Return (Giá trị trả về):</strong> Là ly sinh tố mát lạnh bạn nhận được (Output).</li>
+                    </ul>
+
+                    
+
+                    <h2 id="arrow">3. Arrow Function: Cách viết "cool" của dân Pro</h2>
+                    <p>Có một phần trong JavaScript hiện đại mà mình cực kỳ thích: <strong>Arrow Function</strong> (Hàm mũi tên). Nó giúp rút ngắn cú pháp đến mức tối đa. </p>
+                    <pre>
+                        <code>
+// Cách viết truyền thống
+function chaoHoi(ten) {
+    return "Xin chào " + ten;
+}
+
+// Cách viết Arrow Function
+const chaoHoi = (ten) => `Xin chào ${ten}`;
+                        </code>
+                    </pre>
+                    <p>Là sinh viên, dùng cái này cảm thấy mình "pro" hơn hẳn khi nhìn vào màn hình code!</p>
+
+                    <h2 id="scope">4. Local vs Global Scope: Biến này của ai?</h2>
+                    <p>Đây là phần khiến mình đau đầu nhất. Có những biến mình khai báo trong hàm nhưng ra ngoài lại không dùng được (Local Scope). Khóa học giải thích rất kỹ về "phạm vi hoạt động" này. </p>
+                    
+                    
+
+                    <p>Góc nhìn sinh viên: <em>"Đừng mang đồ đạc cá nhân (biến cục bộ) ra ngoài phòng khách (toàn cục) nếu bạn không muốn gây ra mớ hỗn độn!"</em> Việc hiểu rõ Scope giúp mình tránh được hàng tá lỗi trời ơi đất hỡi khi làm bài thi cuối chương.</p>
+
+                    <h2 id="ket-luan">5. Lời kết: Code ít hơn, làm được nhiều hơn</h2>
+                    <p>Học về hàm là bước ngoặt thực sự. Nó dạy mình tư duy <strong>Module</strong> — chia nhỏ một bài toán lớn thành những phần việc nhỏ dễ quản lý. Đây là nền tảng để mình chuẩn bị bước sang học về Class và Lập trình hướng đối tượng ở những chương sau.</p>
+                    <p>Cảm ơn các bạn đã đồng hành cùng mình đến bài số 4. Ở bài tới, chúng ta sẽ bắt đầu xử lý những tình huống thực tế hơn: <strong>Xử lý lỗi và Debug</strong>. Không ai viết code mà không có lỗi cả, quan trọng là cách chúng ta đối mặt với nó!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #4caf50;">
+                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
+                    <p>Bạn có thích dùng Arrow Function không hay vẫn trung thành với cách viết truyền thống? Hãy chia sẻ bên dưới nhé, mình rất tò mò về phong cách code của các bạn!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog3.html" style="text-decoration: none; color: #666;">← Bài 3: Mảng & Đối tượng</a>
+                    <a href="Blog5.html" style="background: #4caf50; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 5 - Tư duy OOP &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = 'index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

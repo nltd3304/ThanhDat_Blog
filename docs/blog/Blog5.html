@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5: Tư Duy OOP - Khi Code Không Chỉ Là Những Dòng Lệnh | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Khám phá thế giới lập trình hướng đối tượng (OOP) qua Class, Object và các tính chất cốt lõi.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 5: Tư Duy OOP - Khi Code Không Chỉ Là Những Dòng Lệnh</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 14 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="assets/img/blog5-featured.jpg" alt="Object Oriented Programming in JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#class-object">1. Class & Object: Bản thiết kế và Ngôi nhà</a></li>
+                        <li><a href="#encapsulation">2. Tính đóng gói: Giữ bí mật cho dữ liệu</a></li>
+                        <li><a href="#inheritance">3. Tính kế thừa: "Cha truyền con nối" trong Code</a></li>
+                        <li><a href="#prototype">4. Prototype: Bí mật đằng sau diện mạo của JS</a></li>
+                        <li><a href="#ket-luan">5. Cảm nhận: Khi lập trình trở nên thực tế hơn</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="class-object">1. Class & Object: Bản thiết kế và Ngôi nhà</h2>
+                    <p>Trong khóa học Cisco Essentials 2, mình bắt đầu tiếp cận với khái niệm <strong>Class</strong>. Nếu trước đây mình tạo từng đối tượng sinh viên riêng lẻ, thì nay mình tạo ra một "bản thiết kế" chung.</p>
+                    <p>Hãy tưởng tượng <strong>Class</strong> là một bản vẽ kỹ thuật của một ngôi nhà, và <strong>Object</strong> chính là những ngôi nhà thực sự được xây nên từ bản vẽ đó. Chúng có cùng cấu trúc nhưng màu sơn hoặc nội thất (dữ liệu) có thể khác nhau.</p>
+
+                    
+
+                    <h2 id="encapsulation">2. Tính đóng gói: Giữ bí mật cho dữ liệu</h2>
+                    <p>Có một điều mình cực tâm đắc khi học OOP là <strong>Encapsulation (Tính đóng gói)</strong>. Nó giúp mình che giấu những logic phức tạp bên trong và chỉ đưa ra những cái "nút" đơn giản cho người dùng sử dụng. </p>
+                    <p>Giống như việc bạn lái xe ô tô, bạn chỉ cần biết đạp ga và phanh, còn việc động cơ đốt xăng thế nào thì đã được "đóng gói" kỹ càng dưới nắp capo. Điều này giúp code của mình an toàn và dễ bảo trì hơn rất nhiều.</p>
+
+                    <h2 id="inheritance">3. Tính kế thừa: "Cha truyền con nối" trong Code</h2>
+                    <p><strong>Inheritance (Tính kế thừa)</strong> là một phép màu giúp sinh viên chúng mình bớt phải gõ code lại từ đầu. Ví dụ: Mình có một Class <code>Nguoi</code>, sau đó mình tạo thêm Class <code>SinhVien</code> kế thừa từ <code>Nguoi</code>. </p>
+                    <p>Tất cả những thuộc tính như tên, tuổi, ngày sinh không cần phải viết lại nữa. <code>SinhVien</code> mặc nhiên có hết và chỉ việc thêm vào những thứ riêng biệt như <code>maSinhVien</code> hay <code>diemGPA</code>. Cực kỳ tiện lợi!</p>
+
+                    
+
+                    <h2 id="prototype">4. Prototype: Bí mật đằng sau diện mạo của JS</h2>
+                    <p>Dù dùng <code>class</code> trông rất giống Java hay C#, nhưng Cisco chỉ ra rằng bản chất JavaScript vẫn là <strong>Prototype-based</strong>. Ban đầu mình hơi "lú" chỗ này, nhưng sau vài bài Lab, mình nhận ra Prototype chính là cơ chế mà các đối tượng "mượn" phương thức của nhau. </p>
+                    <p>Hiểu được Prototype là bạn đã nắm được "linh hồn" của JavaScript, giúp bạn giải thích được tại sao mọi thứ trong JS đều có thể coi là một đối tượng.</p>
+
+                    <h2 id="ket-luan">5. Cảm nhận: Khi lập trình trở nên thực tế hơn</h2>
+                    <p>Kết thúc chương về OOP, mình thấy cách mình nhìn nhận một bài toán đã thay đổi. Thay vì nghĩ: "Bước 1 làm gì, bước 2 làm gì", mình sẽ nghĩ: "Hệ thống này có những thực thể nào, chúng tương tác với nhau ra sao?". </p>
+                    <p>Tư duy hướng đối tượng không chỉ giúp mình pass bài thi của Cisco mà còn là nền tảng để sau này mình học các Framework như <strong>React</strong> hay <strong>Angular</strong> một cách dễ dàng hơn.</p>
+                    <p>Hẹn gặp lại các bạn ở Bài 6, nơi chúng ta sẽ học cách đối mặt với những "vị khách không mời" trong code: <strong>Xử lý lỗi và Exception!</strong></p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #673ab7;">
+                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
+                    <p>OOP có thể hơi khó nuốt lúc đầu, nhưng một khi đã "thấm", bạn sẽ thấy nó cực kỳ logic. Bạn thấy tính chất nào của OOP là thú vị nhất? Hãy để lại bình luận nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog4.html" style="text-decoration: none; color: #666;">← Bài 4: Hàm (Function)</a>
+                    <a href="Blog6.html" style="background: #673ab7; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 6 - Xử lý lỗi &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = 'index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

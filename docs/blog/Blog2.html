@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2: Khi Code Biết "Tư Duy" - Câu Lệnh Điều Kiện & Vòng Lặp | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 1: Khám phá cách điều khiển luồng dữ liệu với If-else, Switch và những bài học 'xương máu' về vòng lặp vô tận.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 2: Khi Code Biết "Tư Duy" - Câu Lệnh Điều Kiện & Vòng Lặp</h1>
+
+                <div class="post-meta">
+                    <span class="meta-item">📅 11 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="assets/img/blog2-featured.jpg" alt="Minh họa luồng điều khiển trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#logic-flow">1. Logic Flow: Khi code không còn chạy thẳng</a></li>
+                        <li><a href="#if-else">2. If-Else và Switch: Nghệ thuật lựa chọn</a></li>
+                        <li><a href="#vong-lap">3. Vòng lặp: Sức mạnh (và hiểm họa) của sự lặp lại</a></li>
+                        <li><a href="#bai-hoc">4. Bài học "xương máu" về vòng lặp vô tận</a></li>
+                        <li><a href="#ket-luan">5. Tổng kết: Tư duy như một người điều phối</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="logic-flow">1. Logic Flow: Khi code không còn chạy thẳng</h2>
+                    <p>Ở Bài 1, mình đã học cách khai báo biến, nhưng những dòng code đó chỉ chạy "một lèo" từ trên xuống dưới rồi kết thúc. Trong thực tế, một ứng dụng phải biết phản hồi dựa trên dữ liệu người dùng. Khóa học Cisco gọi đây là <strong>Control Flow</strong> (Luồng điều khiển).</p>
+                    <p>Nói một cách bình dân theo kiểu sinh viên: Nếu bài 1 là học cách chuẩn bị nguyên liệu, thì bài 2 là học cách nấu ăn. Phải biết khi nào thì cho muối, khi nào thì tắt bếp.</p>
+
+                    
+
+                    <h2 id="if-else">2. If-Else và Switch: Nghệ thuật lựa chọn</h2>
+                    <p>Cisco dạy mình rằng <code>if-else</code> là nền tảng của mọi logic. Nhưng điều thú vị là khi mình làm bài tập phân loại học lực sinh viên, mình nhận ra nếu dùng quá nhiều <code>if</code> lồng nhau (nested if), code sẽ trở thành một "đống bùi nhùi".</p>
+                    <p>Đó là lúc <code>switch-case</code> xuất hiện như một cứu cánh. Nó giúp mã nguồn của mình trông "sang" hơn hẳn và cực kỳ dễ bảo trì khi có nhiều điều kiện cố định. Bài học rút ra: <em>Đừng cố đấm ăn xôi với If-else nếu bạn có trên 4 lựa chọn rõ ràng.</em></p>
+                    
+                    <h2 id="vong-lap">3. Vòng lặp: Sức mạnh (và hiểm họa) của sự lặp lại</h2>
+                    <p>Phần <strong>Loops</strong> trong JavaScript Essentials 1 thực sự khiến mình choáng ngợp. Máy tính có thể thực hiện 1.000 phép tính trong tích tắc thông qua vòng lặp <code>for</code> hoặc <code>while</code>.</p>
+                    <ul>
+                        <li><strong>Vòng lặp For:</strong> Mình dùng nó khi biết trước số lần cần làm (như duyệt qua danh sách 50 sinh viên trong lớp).</li>
+                        <li><strong>Vòng lặp While:</strong> Dùng khi mình không biết bao giờ thì xong, chỉ biết là "còn đúng thì còn làm" (như chờ người dùng nhập đúng mật khẩu).</li>
+                    </ul>
+
+                    
+
+                    <h2 id="bai-hoc">4. Bài học "xương máu" về vòng lặp vô tận</h2>
+                    <p>Mình sẽ không bao giờ quên bài Lab số 3. Mình viết một vòng lặp <code>while</code> nhưng quên mất việc cập nhật biến đếm. Kết quả? Trình duyệt Chrome của mình "đứng hình", quạt tản nhiệt laptop kêu như tiếng máy bay phản lực.</p>
+                    <blockquote>
+                        "Vòng lặp vô tận (Infinite Loop) là bài kiểm tra sự kiên nhẫn mà mọi sinh viên IT đều phải trải qua ít nhất một lần để trưởng thành."
+                    </blockquote>
+                    <p>Lúc đó mình mới thấm thía tại sao giáo trình Cisco lại nhấn mạnh việc kiểm tra <strong>điều kiện dừng</strong> kỹ đến thế. Một sai sót nhỏ có thể làm sập cả một ứng dụng.</p>
+
+                    <h2 id="ket-luan">5. Tổng kết: Tư duy như một người điều phối</h2>
+                    <p>Kết thúc chương 2, mình không còn nhìn code như những dòng lệnh rời rạc nữa. Mình bắt đầu thấy được những "ngã rẽ" và những "vòng xoáy" của dữ liệu. Khóa học bài bản giúp mình rèn luyện sự cẩn trọng — thứ mà những video tutorial nhanh gọn trên mạng thường bỏ qua.</p>
+                    <p>Hẹn gặp lại các bạn ở Bài 3, nơi mình sẽ bắt đầu khám phá cách quản lý hàng ngàn dữ liệu cùng lúc với <strong>Array và Object</strong> nhé!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #e91e63;">
+                    <h4>👨‍🎓 Nhật ký học tập của Đạt</h4>
+                    <p>Học lập trình không khó, cái khó là giữ được sự kiên nhẫn khi gặp lỗi "vô tận". Nếu bạn cũng từng làm treo máy tính như mình, hãy để lại bình luận chia sẻ nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog1.html" style="text-decoration: none; color: #666;">← Bài 1: Nhập môn</a>
+                    <a href="Blog3.html" style="background: #e91e63; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 3 - Mảng & Đối tượng &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = 'index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

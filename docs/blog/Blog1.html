@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Từ Tự Học "Mì Ăn Liền" Đến Lộ Trình Cisco Bài Bản | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 1 của một sinh viên. Tại sao học bài bản lại khác biệt hoàn toàn với việc xem tutorial rời rạc trên mạng?">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 1: Nhập Môn JavaScript - Từ Tự Học "Mì Ăn Liền" Đến Lộ Trình Bài Bản</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 10 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="assets/img/blog1-featured.jpg" alt="Sinh viên học JavaScript Essentials trên NetAcad" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#ly-do">1. Tại sao mình chọn NetAcad thay vì YouTube?</a></li>
+                        <li><a href="#moi-truong">2. Môi trường Run-time: Cái bẫy của người mới</a></li>
+                        <li><a href="#bien-va-scope">3. Biến và Scope: Bài học về sự ngăn nắp</a></li>
+                        <li><a href="#kieu-du-lieu">4. Data Types: Khi máy tính không hiểu ý bạn</a></li>
+                        <li><a href="#cam-nhan">5. Cảm nhận sau chương 1: Chậm mà chắc</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="ly-do">1. Tại sao mình chọn NetAcad thay vì YouTube?</h2>
+                    <p>Chào mọi người, mình là Đạt. Trước khi biết đến khóa <strong>JavaScript Essentials 1</strong> trên NetAcad, mình đã từng tốn hàng tháng trời xem các tutorial "Xây dựng ứng dụng trong 30 phút" trên YouTube. Kết quả? Mình copy code theo họ thì chạy, nhưng tự viết một dòng thì... tịt ngóm.</p>
+                    <p>Khóa học của Cisco ép mình đi từ gốc: Tại sao JS ra đời? Tại sao nó chạy được trên trình duyệt? Những câu hỏi tưởng như "vô thưởng vô phạt" này lại giúp mình hiểu được bản chất vấn đề. Thay vì học ngọn, mình đang xây móng.</p>
+                    
+                    <h2 id="moi-truong">2. Môi trường Run-time: Cái bẫy của người mới</h2>
+                    <p>Lúc đầu, mình cứ nghĩ viết code xong nhấn nút Play là nó chạy. Nhưng bài học đầu tiên dạy mình về <strong>Engine</strong> và <strong>Runtime Environment</strong>. Mình nhận ra Node.js và Chrome Console thực chất là hai môi trường khác nhau dù dùng chung bộ não V8 Engine.</p>
+                    
+
+                    <h2 id="bien-va-scope">3. Biến và Scope: Bài học về sự ngăn nắp</h2>
+                    <p>Trong sinh viên chúng mình, thói quen đặt tên biến kiểu <code>a</code>, <code>b</code>, <code>c</code> hay <code>bien1</code> cực kỳ phổ biến. Nhưng Cisco đã rèn cho mình tư duy "Clean Code" ngay từ những dòng khai báo đầu tiên:</p>
+                    <ul>
+                        <li><strong>Dùng `const` theo mặc định:</strong> Để bảo vệ dữ liệu khỏi bị thay đổi ngoài ý muốn.</li>
+                        <li><strong>Hạn chế `var`:</strong> Tránh lỗi lậu (Hoisting) mà sinh viên thường mắc phải khi code dự án lớn.</li>
+                    </ul>
+                    <p>Góc nhìn sinh viên của mình: <em>"Hãy coi biến như một cái hộp được dán nhãn rõ ràng. Nếu bạn không biết cái hộp đó chứa gì, đừng mong máy tính hiểu."</em></p>
+
+                    <h2 id="kieu-du-lieu">4. Data Types: Khi máy tính không hiểu ý bạn</h2>
+                    <p>Có một phần trong bài học khiến mình "há hốc mồm" là sự khác biệt giữa <code>undefined</code> và <code>null</code>. Trước đây mình cứ nghĩ chúng là một.</p>
+                    
+
+                    <p>Khóa học giải thích rất kỹ về việc JS là ngôn ngữ "Dynamic typing". Điều này cực kỳ nguy hiểm nếu bạn không nắm vững. Mình đã từng làm một phép cộng điểm sinh viên và nhận về kết quả <code>105</code> thay vì <code>15</code> chỉ vì quên chuyển kiểu dữ liệu từ String sang Number!</p>
+
+                    <h2 id="cam-nhan">5. Cảm nhận sau chương 1: Chậm mà chắc</h2>
+                    <p>Kết thúc chương 1, mình chưa làm được cái web nào hoành tráng cả. Nhưng mình cảm thấy <strong>tự tin hơn</strong>. Mình biết rõ khi mình gõ <code>let x = 10</code>, cái gì đang xảy ra trong bộ nhớ máy tính. </p>
+                    <p>Học đại học đôi khi khiến chúng ta chạy theo điểm số, nhưng học lập trình bài bản thế này mang lại một cảm giác "Master" thực sự. Hẹn gặp các bạn ở Bài 2, khi mình bắt đầu "vật lộn" với các cấu trúc điều khiển nhé!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #209cee;">
+                    <h4>👨‍🎓 Về tác giả</h4>
+                    <p>Mình là Đạt, sinh viên ngành CNTT. Mình đang theo đuổi lộ trình Full-stack với mục tiêu lấy được chứng chỉ Cisco JavaScript Essentials trong kỳ học này. Cùng học với mình nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="blog.html" style="text-decoration: none; color: #666;">← Xem các bài viết khác</a>
+                    <a href="Blog2.html" style="background: #209cee; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp tục: Bài 2 - Câu lệnh điều kiện &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = 'index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>
