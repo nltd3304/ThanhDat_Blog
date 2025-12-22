@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-<head>
+<head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 2: Khi Code Biết "Tư Duy" - Câu Lệnh Điều Kiện & Vòng Lặp | Blog Thành Đạt</title>
-    <meta name="description" content="Nhật ký học JavaScript Essentials 1: Khám phá cách điều khiển luồng dữ liệu với If-else, Switch và những bài học 'xương máu' về vòng lặp vô tận.">
+    <title>BÃ i 2: Khi Code Biáº¿t "TÆ° Duy" - CÃ¢u Lá»‡nh Äiá»u Kiá»‡n & VÃ²ng Láº·p | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 1: KhÃ¡m phÃ¡ cÃ¡ch Ä‘iá»u khiá»ƒn luá»“ng dá»¯ liá»‡u vá»›i If-else, Switch vÃ  nhá»¯ng bÃ i há»c 'xÆ°Æ¡ng mÃ¡u' vá» vÃ²ng láº·p vÃ´ táº­n.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -13,13 +13,13 @@
 
     <header id="main-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <a href="index.html" class="logo">THÃ€NH Äáº T BLOG</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html" class="nav-link">Trang Chá»§</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li> 
-                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="cta-nav-link">LiÃªn Há»‡</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,19 +28,19 @@
     <main>
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
-                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
-                <h1 class="post-title-main">Bài 2: Khi Code Biết "Tư Duy" - Câu Lệnh Điều Kiện & Vòng Lặp</h1>
+                <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
+                <h1 class="post-title-main">BÃ i 2: Khi Code Biáº¿t "TÆ° Duy" - CÃ¢u Lá»‡nh Äiá»u Kiá»‡n & VÃ²ng Láº·p</h1>
 
                 <div class="post-meta">
-                    <span class="meta-item">📅 11 Tháng 12, 2025</span>
-                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
-                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+                    <span class="meta-item">ðŸ“… 11 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
+                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 1</span>
 
                 </div>
             </div>
             
             <div class="post-featured-image container" style="margin-top: 2rem;">
-                <img src="assets/img/blog2-featured.jpg" alt="Minh họa luồng điều khiển trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <img src="assets/img/blog2-featured.jpg" alt="Minh há»a luá»“ng Ä‘iá»u khiá»ƒn trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
         </section>
 
@@ -48,47 +48,47 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Nội dung bài viết</h4>
+                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
                     <ul>
-                        <li><a href="#logic-flow">1. Logic Flow: Khi code không còn chạy thẳng</a></li>
-                        <li><a href="#if-else">2. If-Else và Switch: Nghệ thuật lựa chọn</a></li>
-                        <li><a href="#vong-lap">3. Vòng lặp: Sức mạnh (và hiểm họa) của sự lặp lại</a></li>
-                        <li><a href="#bai-hoc">4. Bài học "xương máu" về vòng lặp vô tận</a></li>
-                        <li><a href="#ket-luan">5. Tổng kết: Tư duy như một người điều phối</a></li>
+                        <li><a href="#logic-flow">1. Logic Flow: Khi code khÃ´ng cÃ²n cháº¡y tháº³ng</a></li>
+                        <li><a href="#if-else">2. If-Else vÃ  Switch: Nghá»‡ thuáº­t lá»±a chá»n</a></li>
+                        <li><a href="#vong-lap">3. VÃ²ng láº·p: Sá»©c máº¡nh (vÃ  hiá»ƒm há»a) cá»§a sá»± láº·p láº¡i</a></li>
+                        <li><a href="#bai-hoc">4. BÃ i há»c "xÆ°Æ¡ng mÃ¡u" vá» vÃ²ng láº·p vÃ´ táº­n</a></li>
+                        <li><a href="#ket-luan">5. Tá»•ng káº¿t: TÆ° duy nhÆ° má»™t ngÆ°á»i Ä‘iá»u phá»‘i</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="logic-flow">1. Logic Flow: Khi code không còn chạy thẳng</h2>
-                    <p>Ở Bài 1, mình đã học cách khai báo biến, nhưng những dòng code đó chỉ chạy "một lèo" từ trên xuống dưới rồi kết thúc. Trong thực tế, một ứng dụng phải biết phản hồi dựa trên dữ liệu người dùng. Khóa học Cisco gọi đây là <strong>Control Flow</strong> (Luồng điều khiển).</p>
-                    <p>Nói một cách bình dân theo kiểu sinh viên: Nếu bài 1 là học cách chuẩn bị nguyên liệu, thì bài 2 là học cách nấu ăn. Phải biết khi nào thì cho muối, khi nào thì tắt bếp.</p>
+                    <h2 id="logic-flow">1. Logic Flow: Khi code khÃ´ng cÃ²n cháº¡y tháº³ng</h2>
+                    <p>á»ž BÃ i 1, mÃ¬nh Ä‘Ã£ há»c cÃ¡ch khai bÃ¡o biáº¿n, nhÆ°ng nhá»¯ng dÃ²ng code Ä‘Ã³ chá»‰ cháº¡y "má»™t lÃ¨o" tá»« trÃªn xuá»‘ng dÆ°á»›i rá»“i káº¿t thÃºc. Trong thá»±c táº¿, má»™t á»©ng dá»¥ng pháº£i biáº¿t pháº£n há»“i dá»±a trÃªn dá»¯ liá»‡u ngÆ°á»i dÃ¹ng. KhÃ³a há»c Cisco gá»i Ä‘Ã¢y lÃ  <strong>Control Flow</strong> (Luá»“ng Ä‘iá»u khiá»ƒn).</p>
+                    <p>NÃ³i má»™t cÃ¡ch bÃ¬nh dÃ¢n theo kiá»ƒu sinh viÃªn: Náº¿u bÃ i 1 lÃ  há»c cÃ¡ch chuáº©n bá»‹ nguyÃªn liá»‡u, thÃ¬ bÃ i 2 lÃ  há»c cÃ¡ch náº¥u Äƒn. Pháº£i biáº¿t khi nÃ o thÃ¬ cho muá»‘i, khi nÃ o thÃ¬ táº¯t báº¿p.</p>
 
                     
 
-                    <h2 id="if-else">2. If-Else và Switch: Nghệ thuật lựa chọn</h2>
-                    <p>Cisco dạy mình rằng <code>if-else</code> là nền tảng của mọi logic. Nhưng điều thú vị là khi mình làm bài tập phân loại học lực sinh viên, mình nhận ra nếu dùng quá nhiều <code>if</code> lồng nhau (nested if), code sẽ trở thành một "đống bùi nhùi".</p>
-                    <p>Đó là lúc <code>switch-case</code> xuất hiện như một cứu cánh. Nó giúp mã nguồn của mình trông "sang" hơn hẳn và cực kỳ dễ bảo trì khi có nhiều điều kiện cố định. Bài học rút ra: <em>Đừng cố đấm ăn xôi với If-else nếu bạn có trên 4 lựa chọn rõ ràng.</em></p>
+                    <h2 id="if-else">2. If-Else vÃ  Switch: Nghá»‡ thuáº­t lá»±a chá»n</h2>
+                    <p>Cisco dáº¡y mÃ¬nh ráº±ng <code>if-else</code> lÃ  ná»n táº£ng cá»§a má»i logic. NhÆ°ng Ä‘iá»u thÃº vá»‹ lÃ  khi mÃ¬nh lÃ m bÃ i táº­p phÃ¢n loáº¡i há»c lá»±c sinh viÃªn, mÃ¬nh nháº­n ra náº¿u dÃ¹ng quÃ¡ nhiá»u <code>if</code> lá»“ng nhau (nested if), code sáº½ trá»Ÿ thÃ nh má»™t "Ä‘á»‘ng bÃ¹i nhÃ¹i".</p>
+                    <p>ÄÃ³ lÃ  lÃºc <code>switch-case</code> xuáº¥t hiá»‡n nhÆ° má»™t cá»©u cÃ¡nh. NÃ³ giÃºp mÃ£ nguá»“n cá»§a mÃ¬nh trÃ´ng "sang" hÆ¡n háº³n vÃ  cá»±c ká»³ dá»… báº£o trÃ¬ khi cÃ³ nhiá»u Ä‘iá»u kiá»‡n cá»‘ Ä‘á»‹nh. BÃ i há»c rÃºt ra: <em>Äá»«ng cá»‘ Ä‘áº¥m Äƒn xÃ´i vá»›i If-else náº¿u báº¡n cÃ³ trÃªn 4 lá»±a chá»n rÃµ rÃ ng.</em></p>
                     
-                    <h2 id="vong-lap">3. Vòng lặp: Sức mạnh (và hiểm họa) của sự lặp lại</h2>
-                    <p>Phần <strong>Loops</strong> trong JavaScript Essentials 1 thực sự khiến mình choáng ngợp. Máy tính có thể thực hiện 1.000 phép tính trong tích tắc thông qua vòng lặp <code>for</code> hoặc <code>while</code>.</p>
+                    <h2 id="vong-lap">3. VÃ²ng láº·p: Sá»©c máº¡nh (vÃ  hiá»ƒm há»a) cá»§a sá»± láº·p láº¡i</h2>
+                    <p>Pháº§n <strong>Loops</strong> trong JavaScript Essentials 1 thá»±c sá»± khiáº¿n mÃ¬nh choÃ¡ng ngá»£p. MÃ¡y tÃ­nh cÃ³ thá»ƒ thá»±c hiá»‡n 1.000 phÃ©p tÃ­nh trong tÃ­ch táº¯c thÃ´ng qua vÃ²ng láº·p <code>for</code> hoáº·c <code>while</code>.</p>
                     <ul>
-                        <li><strong>Vòng lặp For:</strong> Mình dùng nó khi biết trước số lần cần làm (như duyệt qua danh sách 50 sinh viên trong lớp).</li>
-                        <li><strong>Vòng lặp While:</strong> Dùng khi mình không biết bao giờ thì xong, chỉ biết là "còn đúng thì còn làm" (như chờ người dùng nhập đúng mật khẩu).</li>
+                        <li><strong>VÃ²ng láº·p For:</strong> MÃ¬nh dÃ¹ng nÃ³ khi biáº¿t trÆ°á»›c sá»‘ láº§n cáº§n lÃ m (nhÆ° duyá»‡t qua danh sÃ¡ch 50 sinh viÃªn trong lá»›p).</li>
+                        <li><strong>VÃ²ng láº·p While:</strong> DÃ¹ng khi mÃ¬nh khÃ´ng biáº¿t bao giá» thÃ¬ xong, chá»‰ biáº¿t lÃ  "cÃ²n Ä‘Ãºng thÃ¬ cÃ²n lÃ m" (nhÆ° chá» ngÆ°á»i dÃ¹ng nháº­p Ä‘Ãºng máº­t kháº©u).</li>
                     </ul>
 
                     
 
-                    <h2 id="bai-hoc">4. Bài học "xương máu" về vòng lặp vô tận</h2>
-                    <p>Mình sẽ không bao giờ quên bài Lab số 3. Mình viết một vòng lặp <code>while</code> nhưng quên mất việc cập nhật biến đếm. Kết quả? Trình duyệt Chrome của mình "đứng hình", quạt tản nhiệt laptop kêu như tiếng máy bay phản lực.</p>
+                    <h2 id="bai-hoc">4. BÃ i há»c "xÆ°Æ¡ng mÃ¡u" vá» vÃ²ng láº·p vÃ´ táº­n</h2>
+                    <p>MÃ¬nh sáº½ khÃ´ng bao giá» quÃªn bÃ i Lab sá»‘ 3. MÃ¬nh viáº¿t má»™t vÃ²ng láº·p <code>while</code> nhÆ°ng quÃªn máº¥t viá»‡c cáº­p nháº­t biáº¿n Ä‘áº¿m. Káº¿t quáº£? TrÃ¬nh duyá»‡t Chrome cá»§a mÃ¬nh "Ä‘á»©ng hÃ¬nh", quáº¡t táº£n nhiá»‡t laptop kÃªu nhÆ° tiáº¿ng mÃ¡y bay pháº£n lá»±c.</p>
                     <blockquote>
-                        "Vòng lặp vô tận (Infinite Loop) là bài kiểm tra sự kiên nhẫn mà mọi sinh viên IT đều phải trải qua ít nhất một lần để trưởng thành."
+                        "VÃ²ng láº·p vÃ´ táº­n (Infinite Loop) lÃ  bÃ i kiá»ƒm tra sá»± kiÃªn nháº«n mÃ  má»i sinh viÃªn IT Ä‘á»u pháº£i tráº£i qua Ã­t nháº¥t má»™t láº§n Ä‘á»ƒ trÆ°á»Ÿng thÃ nh."
                     </blockquote>
-                    <p>Lúc đó mình mới thấm thía tại sao giáo trình Cisco lại nhấn mạnh việc kiểm tra <strong>điều kiện dừng</strong> kỹ đến thế. Một sai sót nhỏ có thể làm sập cả một ứng dụng.</p>
+                    <p>LÃºc Ä‘Ã³ mÃ¬nh má»›i tháº¥m thÃ­a táº¡i sao giÃ¡o trÃ¬nh Cisco láº¡i nháº¥n máº¡nh viá»‡c kiá»ƒm tra <strong>Ä‘iá»u kiá»‡n dá»«ng</strong> ká»¹ Ä‘áº¿n tháº¿. Má»™t sai sÃ³t nhá» cÃ³ thá»ƒ lÃ m sáº­p cáº£ má»™t á»©ng dá»¥ng.</p>
 
-                    <h2 id="ket-luan">5. Tổng kết: Tư duy như một người điều phối</h2>
-                    <p>Kết thúc chương 2, mình không còn nhìn code như những dòng lệnh rời rạc nữa. Mình bắt đầu thấy được những "ngã rẽ" và những "vòng xoáy" của dữ liệu. Khóa học bài bản giúp mình rèn luyện sự cẩn trọng — thứ mà những video tutorial nhanh gọn trên mạng thường bỏ qua.</p>
-                    <p>Hẹn gặp lại các bạn ở Bài 3, nơi mình sẽ bắt đầu khám phá cách quản lý hàng ngàn dữ liệu cùng lúc với <strong>Array và Object</strong> nhé!</p>
+                    <h2 id="ket-luan">5. Tá»•ng káº¿t: TÆ° duy nhÆ° má»™t ngÆ°á»i Ä‘iá»u phá»‘i</h2>
+                    <p>Káº¿t thÃºc chÆ°Æ¡ng 2, mÃ¬nh khÃ´ng cÃ²n nhÃ¬n code nhÆ° nhá»¯ng dÃ²ng lá»‡nh rá»i ráº¡c ná»¯a. MÃ¬nh báº¯t Ä‘áº§u tháº¥y Ä‘Æ°á»£c nhá»¯ng "ngÃ£ ráº½" vÃ  nhá»¯ng "vÃ²ng xoÃ¡y" cá»§a dá»¯ liá»‡u. KhÃ³a há»c bÃ i báº£n giÃºp mÃ¬nh rÃ¨n luyá»‡n sá»± cáº©n trá»ng â€” thá»© mÃ  nhá»¯ng video tutorial nhanh gá»n trÃªn máº¡ng thÆ°á»ng bá» qua.</p>
+                    <p>Háº¹n gáº·p láº¡i cÃ¡c báº¡n á»Ÿ BÃ i 3, nÆ¡i mÃ¬nh sáº½ báº¯t Ä‘áº§u khÃ¡m phÃ¡ cÃ¡ch quáº£n lÃ½ hÃ ng ngÃ n dá»¯ liá»‡u cÃ¹ng lÃºc vá»›i <strong>Array vÃ  Object</strong> nhÃ©!</p>
 
                 </article>
             </div>
@@ -97,14 +97,14 @@
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
                 <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #e91e63;">
-                    <h4>👨‍🎓 Nhật ký học tập của Đạt</h4>
-                    <p>Học lập trình không khó, cái khó là giữ được sự kiên nhẫn khi gặp lỗi "vô tận". Nếu bạn cũng từng làm treo máy tính như mình, hãy để lại bình luận chia sẻ nhé!</p>
+                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ há»c táº­p cá»§a Äáº¡t</h4>
+                    <p>Há»c láº­p trÃ¬nh khÃ´ng khÃ³, cÃ¡i khÃ³ lÃ  giá»¯ Ä‘Æ°á»£c sá»± kiÃªn nháº«n khi gáº·p lá»—i "vÃ´ táº­n". Náº¿u báº¡n cÅ©ng tá»«ng lÃ m treo mÃ¡y tÃ­nh nhÆ° mÃ¬nh, hÃ£y Ä‘á»ƒ láº¡i bÃ¬nh luáº­n chia sáº» nhÃ©!</p>
                 </div>
                 
                 <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog1.html" style="text-decoration: none; color: #666;">← Bài 1: Nhập môn</a>
+                    <a href="Blog1.html" style="text-decoration: none; color: #666;">â† BÃ i 1: Nháº­p mÃ´n</a>
                     <a href="Blog3.html" style="background: #e91e63; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiếp theo: Bài 3 - Mảng & Đối tượng &rarr;
+                        Tiáº¿p theo: BÃ i 3 - Máº£ng & Äá»‘i tÆ°á»£ng &rarr;
                     </a>
                 </div>
             </div>
@@ -113,7 +113,7 @@
 
     <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
         <div class="container text-center">
-            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <p>&copy; 2025 ThÃ nh Äáº¡t Blog - Há»c Ä‘á»ƒ xÃ¢y dá»±ng tÆ°Æ¡ng lai</p>
             <div style="margin-top: 1rem;">
                 <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
                 <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
@@ -122,17 +122,18 @@
         </div>
     </footer>
     <script>
-    // Chọn phần tử có class là 'logo'
+    // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
 
-    // Thêm sự kiện click
+    // ThÃªm sá»± kiá»‡n click
     logoElement.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
-        window.location.href = 'index.html'; // Điều hướng về trang chủ
+        e.preventDefault(); // NgÄƒn cháº·n hÃ nh vi máº·c Ä‘á»‹nh náº¿u cÃ³
+        window.location.href = 'index.html'; // Äiá»u hÆ°á»›ng vá» trang chá»§
     });
 
-    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    // ThÃªm style con trá» chuá»™t Ä‘á»ƒ ngÆ°á»i dÃ¹ng biáº¿t cÃ³ thá»ƒ click Ä‘Æ°á»£c
     logoElement.style.cursor = 'pointer';
 </script>
 </body>
 </html>
+

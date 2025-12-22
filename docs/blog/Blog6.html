@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-<head>
+<head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 6: Xử Lý Lỗi - Đừng Để Code Của Bạn "Chết" Trong Im Lặng | Blog Thành Đạt</title>
-    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Cách sử dụng try-catch, throw và xử lý ngoại lệ để xây dựng ứng dụng bền bỉ.">
+    <title>BÃ i 6: Xá»­ LÃ½ Lá»—i - Äá»«ng Äá»ƒ Code Cá»§a Báº¡n "Cháº¿t" Trong Im Láº·ng | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 2: CÃ¡ch sá»­ dá»¥ng try-catch, throw vÃ  xá»­ lÃ½ ngoáº¡i lá»‡ Ä‘á»ƒ xÃ¢y dá»±ng á»©ng dá»¥ng bá»n bá»‰.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -13,13 +13,13 @@
 
     <header id="main-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <a href="index.html" class="logo">THÃ€NH Äáº T BLOG</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html" class="nav-link">Trang Chá»§</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li> 
-                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="cta-nav-link">LiÃªn Há»‡</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,18 +28,18 @@
     <main>
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
-                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
-                <h1 class="post-title-main">Bài 6: Xử Lý Lỗi - Đừng Để Code Của Bạn "Chết" Trong Im Lặng</h1>
+                <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
+                <h1 class="post-title-main">BÃ i 6: Xá»­ LÃ½ Lá»—i - Äá»«ng Äá»ƒ Code Cá»§a Báº¡n "Cháº¿t" Trong Im Láº·ng</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">📅 15 Tháng 12, 2025</span>
-                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
-                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                    <span class="meta-item">ðŸ“… 15 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
+                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 2</span>
                 </div>
             </div>
             
             <div class="post-featured-image container" style="margin-top: 2rem;">
-                <img src="assets/img/blog6-featured.jpg" alt="Xử lý lỗi trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <img src="assets/img/blog6-featured.jpg" alt="Xá»­ lÃ½ lá»—i trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
         </section>
 
@@ -47,24 +47,24 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Mục lục bài viết</h4>
+                    <h4>Má»¥c lá»¥c bÃ i viáº¿t</h4>
                     <ul>
-                        <li><a href="#loi-la-gi">1. Lỗi không đáng sợ, đáng sợ là không biết lỗi ở đâu</a></li>
-                        <li><a href="#try-catch">2. Try-Catch: Tấm lưới bảo hiểm của lập trình viên</a></li>
-                        <li><a href="#throw">3. Chủ động "ném" lỗi với Throw</a></li>
-                        <li><a href="#finally">4. Finally: Dọn dẹp chiến trường</a></li>
-                        <li><a href="#ket-luan">5. Cảm nhận: Code "sạch" là code biết tự bảo vệ</a></li>
+                        <li><a href="#loi-la-gi">1. Lá»—i khÃ´ng Ä‘Ã¡ng sá»£, Ä‘Ã¡ng sá»£ lÃ  khÃ´ng biáº¿t lá»—i á»Ÿ Ä‘Ã¢u</a></li>
+                        <li><a href="#try-catch">2. Try-Catch: Táº¥m lÆ°á»›i báº£o hiá»ƒm cá»§a láº­p trÃ¬nh viÃªn</a></li>
+                        <li><a href="#throw">3. Chá»§ Ä‘á»™ng "nÃ©m" lá»—i vá»›i Throw</a></li>
+                        <li><a href="#finally">4. Finally: Dá»n dáº¹p chiáº¿n trÆ°á»ng</a></li>
+                        <li><a href="#ket-luan">5. Cáº£m nháº­n: Code "sáº¡ch" lÃ  code biáº¿t tá»± báº£o vá»‡</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="loi-la-gi">1. Lỗi không đáng sợ, đáng sợ là không biết lỗi ở đâu</h2>
-                    <p>Trong quá trình làm bài Lab của Cisco, có những lúc code của mình không chạy, nhưng trình duyệt cũng chẳng hiện gì cả. Đó là cảm giác tồi tệ nhất của một sinh viên IT: <strong>Lỗi im lặng.</strong></p>
-                    <p>Khóa học Essentials 2 dạy mình rằng lỗi (Exception) là một phần tất yếu. Thay vì trốn tránh, chúng ta phải học cách dự đoán chúng. Một người dùng có thể nhập chữ vào ô nhập số, hoặc mạng có thể bị ngắt bất ngờ. Code tốt là code phải tính đến những trường hợp "xấu xí" đó.</p>
+                    <h2 id="loi-la-gi">1. Lá»—i khÃ´ng Ä‘Ã¡ng sá»£, Ä‘Ã¡ng sá»£ lÃ  khÃ´ng biáº¿t lá»—i á»Ÿ Ä‘Ã¢u</h2>
+                    <p>Trong quÃ¡ trÃ¬nh lÃ m bÃ i Lab cá»§a Cisco, cÃ³ nhá»¯ng lÃºc code cá»§a mÃ¬nh khÃ´ng cháº¡y, nhÆ°ng trÃ¬nh duyá»‡t cÅ©ng cháº³ng hiá»‡n gÃ¬ cáº£. ÄÃ³ lÃ  cáº£m giÃ¡c tá»“i tá»‡ nháº¥t cá»§a má»™t sinh viÃªn IT: <strong>Lá»—i im láº·ng.</strong></p>
+                    <p>KhÃ³a há»c Essentials 2 dáº¡y mÃ¬nh ráº±ng lá»—i (Exception) lÃ  má»™t pháº§n táº¥t yáº¿u. Thay vÃ¬ trá»‘n trÃ¡nh, chÃºng ta pháº£i há»c cÃ¡ch dá»± Ä‘oÃ¡n chÃºng. Má»™t ngÆ°á»i dÃ¹ng cÃ³ thá»ƒ nháº­p chá»¯ vÃ o Ã´ nháº­p sá»‘, hoáº·c máº¡ng cÃ³ thá»ƒ bá»‹ ngáº¯t báº¥t ngá». Code tá»‘t lÃ  code pháº£i tÃ­nh Ä‘áº¿n nhá»¯ng trÆ°á»ng há»£p "xáº¥u xÃ­" Ä‘Ã³.</p>
 
-                    <h2 id="try-catch">2. Try-Catch: Tấm lưới bảo hiểm của lập trình viên</h2>
-                    <p>Cấu trúc <code>try...catch</code> giống như việc bạn đi thăng bằng trên dây nhưng có một tấm lưới bảo hiểm bên dưới. Bạn đặt những đoạn code "nguy hiểm" vào trong <code>try</code>, và nếu có chuyện gì xảy ra, chương trình sẽ lập tức nhảy vào <code>catch</code> thay vì sụp đổ hoàn toàn.</p>
+                    <h2 id="try-catch">2. Try-Catch: Táº¥m lÆ°á»›i báº£o hiá»ƒm cá»§a láº­p trÃ¬nh viÃªn</h2>
+                    <p>Cáº¥u trÃºc <code>try...catch</code> giá»‘ng nhÆ° viá»‡c báº¡n Ä‘i thÄƒng báº±ng trÃªn dÃ¢y nhÆ°ng cÃ³ má»™t táº¥m lÆ°á»›i báº£o hiá»ƒm bÃªn dÆ°á»›i. Báº¡n Ä‘áº·t nhá»¯ng Ä‘oáº¡n code "nguy hiá»ƒm" vÃ o trong <code>try</code>, vÃ  náº¿u cÃ³ chuyá»‡n gÃ¬ xáº£y ra, chÆ°Æ¡ng trÃ¬nh sáº½ láº­p tá»©c nháº£y vÃ o <code>catch</code> thay vÃ¬ sá»¥p Ä‘á»• hoÃ n toÃ n.</p>
 
                     
 
@@ -74,22 +74,22 @@ try {
     let result = complexCalculation();
     console.log(result);
 } catch (error) {
-    console.error("Có gì đó sai sai: " + error.message);
+    console.error("CÃ³ gÃ¬ Ä‘Ã³ sai sai: " + error.message);
 }
                         </code>
                     </pre>
 
-                    <h2 id="throw">3. Chủ động "ném" lỗi với Throw</h2>
-                    <p>Có một kỹ thuật rất hay trong giáo trình Cisco là chủ động tạo ra lỗi bằng từ khóa <code>throw</code>. </p>
-                    <p>Góc nhìn sinh viên: Lúc đầu mình nghĩ "Tại sao lại tự làm khó mình bằng cách tạo ra lỗi?". Nhưng sau đó mình hiểu ra, việc <code>throw</code> lỗi sớm giúp mình chặn đứng những dữ liệu sai trái ngay từ đầu, tránh để nó đi sâu vào hệ thống và gây ra những hậu quả nghiêm trọng hơn.</p>
+                    <h2 id="throw">3. Chá»§ Ä‘á»™ng "nÃ©m" lá»—i vá»›i Throw</h2>
+                    <p>CÃ³ má»™t ká»¹ thuáº­t ráº¥t hay trong giÃ¡o trÃ¬nh Cisco lÃ  chá»§ Ä‘á»™ng táº¡o ra lá»—i báº±ng tá»« khÃ³a <code>throw</code>. </p>
+                    <p>GÃ³c nhÃ¬n sinh viÃªn: LÃºc Ä‘áº§u mÃ¬nh nghÄ© "Táº¡i sao láº¡i tá»± lÃ m khÃ³ mÃ¬nh báº±ng cÃ¡ch táº¡o ra lá»—i?". NhÆ°ng sau Ä‘Ã³ mÃ¬nh hiá»ƒu ra, viá»‡c <code>throw</code> lá»—i sá»›m giÃºp mÃ¬nh cháº·n Ä‘á»©ng nhá»¯ng dá»¯ liá»‡u sai trÃ¡i ngay tá»« Ä‘áº§u, trÃ¡nh Ä‘á»ƒ nÃ³ Ä‘i sÃ¢u vÃ o há»‡ thá»‘ng vÃ  gÃ¢y ra nhá»¯ng háº­u quáº£ nghiÃªm trá»ng hÆ¡n.</p>
 
-                    <h2 id="finally">4. Finally: Dọn dẹp chiến trường</h2>
-                    <p>Dù code có chạy thành công hay gặp lỗi, khối <code>finally</code> vẫn sẽ luôn được thực thi. Đây là nơi lý tưởng để mình thực hiện các thao tác "dọn dẹp" như đóng kết nối Database hoặc tắt biểu tượng Loading trên giao diện.</p>
-                    <p>Nó giống như việc bạn nấu ăn: dù món ăn có ngon hay bị cháy, bạn vẫn phải rửa bát đĩa và dọn dẹp nhà bếp vậy!</p>
+                    <h2 id="finally">4. Finally: Dá»n dáº¹p chiáº¿n trÆ°á»ng</h2>
+                    <p>DÃ¹ code cÃ³ cháº¡y thÃ nh cÃ´ng hay gáº·p lá»—i, khá»‘i <code>finally</code> váº«n sáº½ luÃ´n Ä‘Æ°á»£c thá»±c thi. ÄÃ¢y lÃ  nÆ¡i lÃ½ tÆ°á»Ÿng Ä‘á»ƒ mÃ¬nh thá»±c hiá»‡n cÃ¡c thao tÃ¡c "dá»n dáº¹p" nhÆ° Ä‘Ã³ng káº¿t ná»‘i Database hoáº·c táº¯t biá»ƒu tÆ°á»£ng Loading trÃªn giao diá»‡n.</p>
+                    <p>NÃ³ giá»‘ng nhÆ° viá»‡c báº¡n náº¥u Äƒn: dÃ¹ mÃ³n Äƒn cÃ³ ngon hay bá»‹ chÃ¡y, báº¡n váº«n pháº£i rá»­a bÃ¡t Ä‘Ä©a vÃ  dá»n dáº¹p nhÃ  báº¿p váº­y!</p>
 
-                    <h2 id="ket-luan">5. Cảm nhận: Code "sạch" là code biết tự bảo vệ</h2>
-                    <p>Sau bài học này, mình bớt sợ những dòng chữ màu đỏ trên Console hơn. Mình nhận ra Debugging không phải là đi tìm sai sót của bản thân, mà là quá trình làm cho ứng dụng trở nên bền bỉ (Robust) hơn.</p>
-                    <p>Bài học tiếp theo sẽ là "quái vật" thực sự của JavaScript: <strong>Lập trình bất đồng bộ (Asynchronous)</strong>. Các bạn hãy chuẩn bị tinh thần nhé, chúng ta sắp chạm tay vào những kiến thức nâng cao nhất rồi!</p>
+                    <h2 id="ket-luan">5. Cáº£m nháº­n: Code "sáº¡ch" lÃ  code biáº¿t tá»± báº£o vá»‡</h2>
+                    <p>Sau bÃ i há»c nÃ y, mÃ¬nh bá»›t sá»£ nhá»¯ng dÃ²ng chá»¯ mÃ u Ä‘á» trÃªn Console hÆ¡n. MÃ¬nh nháº­n ra Debugging khÃ´ng pháº£i lÃ  Ä‘i tÃ¬m sai sÃ³t cá»§a báº£n thÃ¢n, mÃ  lÃ  quÃ¡ trÃ¬nh lÃ m cho á»©ng dá»¥ng trá»Ÿ nÃªn bá»n bá»‰ (Robust) hÆ¡n.</p>
+                    <p>BÃ i há»c tiáº¿p theo sáº½ lÃ  "quÃ¡i váº­t" thá»±c sá»± cá»§a JavaScript: <strong>Láº­p trÃ¬nh báº¥t Ä‘á»“ng bá»™ (Asynchronous)</strong>. CÃ¡c báº¡n hÃ£y chuáº©n bá»‹ tinh tháº§n nhÃ©, chÃºng ta sáº¯p cháº¡m tay vÃ o nhá»¯ng kiáº¿n thá»©c nÃ¢ng cao nháº¥t rá»“i!</p>
 
                 </article>
             </div>
@@ -98,14 +98,14 @@ try {
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
                 <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #f44336;">
-                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
-                    <p>Bạn thường làm gì khi gặp lỗi? Cáu gắt hay bình tĩnh đọc log? Hãy nhớ rằng mỗi con Bug là một cơ hội để chúng ta hiểu sâu hơn về ngôn ngữ đấy!</p>
+                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
+                    <p>Báº¡n thÆ°á»ng lÃ m gÃ¬ khi gáº·p lá»—i? CÃ¡u gáº¯t hay bÃ¬nh tÄ©nh Ä‘á»c log? HÃ£y nhá»› ráº±ng má»—i con Bug lÃ  má»™t cÆ¡ há»™i Ä‘á»ƒ chÃºng ta hiá»ƒu sÃ¢u hÆ¡n vá» ngÃ´n ngá»¯ Ä‘áº¥y!</p>
                 </div>
                 
                 <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog5.html" style="text-decoration: none; color: #666;">← Bài 5: Tư duy OOP</a>
+                    <a href="Blog5.html" style="text-decoration: none; color: #666;">â† BÃ i 5: TÆ° duy OOP</a>
                     <a href="Blog7.html" style="background: #f44336; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiếp theo: Bài 7 - Bất đồng bộ &rarr;
+                        Tiáº¿p theo: BÃ i 7 - Báº¥t Ä‘á»“ng bá»™ &rarr;
                     </a>
                 </div>
             </div>
@@ -114,7 +114,7 @@ try {
 
     <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
         <div class="container text-center">
-            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <p>&copy; 2025 ThÃ nh Äáº¡t Blog - Há»c Ä‘á»ƒ xÃ¢y dá»±ng tÆ°Æ¡ng lai</p>
             <div style="margin-top: 1rem;">
                 <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
                 <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
@@ -123,17 +123,18 @@ try {
         </div>
     </footer>
     <script>
-    // Chọn phần tử có class là 'logo'
+    // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
 
-    // Thêm sự kiện click
+    // ThÃªm sá»± kiá»‡n click
     logoElement.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
-        window.location.href = 'index.html'; // Điều hướng về trang chủ
+        e.preventDefault(); // NgÄƒn cháº·n hÃ nh vi máº·c Ä‘á»‹nh náº¿u cÃ³
+        window.location.href = 'index.html'; // Äiá»u hÆ°á»›ng vá» trang chá»§
     });
 
-    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    // ThÃªm style con trá» chuá»™t Ä‘á»ƒ ngÆ°á»i dÃ¹ng biáº¿t cÃ³ thá»ƒ click Ä‘Æ°á»£c
     logoElement.style.cursor = 'pointer';
 </script>
 </body>
 </html>
+

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-<head>
+<head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 4: Hàm (Function) - Đừng Lặp Lại Chính Mình | Blog Thành Đạt</title>
-    <meta name="description" content="Nhật ký học JavaScript Essentials 1: Tìm hiểu về Function, tham số, giá trị trả về và nguyên tắc DRY để viết code sạch hơn.">
+    <title>BÃ i 4: HÃ m (Function) - Äá»«ng Láº·p Láº¡i ChÃ­nh MÃ¬nh | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 1: TÃ¬m hiá»ƒu vá» Function, tham sá»‘, giÃ¡ trá»‹ tráº£ vá» vÃ  nguyÃªn táº¯c DRY Ä‘á»ƒ viáº¿t code sáº¡ch hÆ¡n.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -13,13 +13,13 @@
 
     <header id="main-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <a href="index.html" class="logo">THÃ€NH Äáº T BLOG</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html" class="nav-link">Trang Chá»§</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li> 
-                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="cta-nav-link">LiÃªn Há»‡</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,19 +28,19 @@
     <main>
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
-                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
-                <h1 class="post-title-main">Bài 4: Hàm (Function) - Nghệ Thuật Đóng Gói Và Tái Sử Dụng</h1>
+                <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
+                <h1 class="post-title-main">BÃ i 4: HÃ m (Function) - Nghá»‡ Thuáº­t ÄÃ³ng GÃ³i VÃ  TÃ¡i Sá»­ Dá»¥ng</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">📅 13 Tháng 12, 2025</span>
-                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
-                    <span class="meta-item">🎓 Level: JavaScript Essentials 1</span>
+                    <span class="meta-item">ðŸ“… 13 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
+                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 1</span>
 
                 </div>
             </div>
             
             <div class="post-featured-image container" style="margin-top: 2rem;">
-                <img src="assets/img/blog4-featured.jpg" alt="Minh họa về Function trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <img src="assets/img/blog4-featured.jpg" alt="Minh há»a vá» Function trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
         </section>
 
@@ -48,57 +48,57 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Nội dung bài viết</h4>
+                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
                     <ul>
-                        <li><a href="#dry">1. Nguyên tắc DRY: Đừng là chiếc máy photocopy</a></li>
-                        <li><a href="#anatomy">2. Cấu tạo của một hàm: Input, Process và Output</a></li>
-                        <li><a href="#arrow">3. Arrow Function: Cách viết "cool" của dân Pro</a></li>
-                        <li><a href="#scope">4. Local vs Global Scope: Biến này của ai?</a></li>
-                        <li><a href="#ket-luan">5. Lời kết: Code ít hơn, làm được nhiều hơn</a></li>
+                        <li><a href="#dry">1. NguyÃªn táº¯c DRY: Äá»«ng lÃ  chiáº¿c mÃ¡y photocopy</a></li>
+                        <li><a href="#anatomy">2. Cáº¥u táº¡o cá»§a má»™t hÃ m: Input, Process vÃ  Output</a></li>
+                        <li><a href="#arrow">3. Arrow Function: CÃ¡ch viáº¿t "cool" cá»§a dÃ¢n Pro</a></li>
+                        <li><a href="#scope">4. Local vs Global Scope: Biáº¿n nÃ y cá»§a ai?</a></li>
+                        <li><a href="#ket-luan">5. Lá»i káº¿t: Code Ã­t hÆ¡n, lÃ m Ä‘Æ°á»£c nhiá»u hÆ¡n</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="dry">1. Nguyên tắc DRY: Đừng là chiếc máy photocopy</h2>
-                    <p>Trong tuần học vừa rồi trên NetAcad, mình gặp một bài tập yêu cầu tính thuế cho 10 loại mặt hàng khác nhau. Lúc đầu, mình định copy-paste đoạn công thức tính thuế 10 lần. Nhưng dừng lại một chút, mình nhớ đến nguyên tắc <strong>DRY (Don't Repeat Yourself)</strong> mà thầy giáo hay nhắc.</p>
-                    <p>Hàm (Function) ra đời để giải quyết việc này. Thay vì viết lại logic, mình chỉ cần định nghĩa nó một lần và gọi tên nó bất cứ khi nào cần. Nó giống như việc bạn chế tạo một cái khuôn làm bánh, từ đó bạn có thể tạo ra hàng nghìn chiếc bánh giống hệt nhau mà không cần nhào bột lại từ đầu.</p>
+                    <h2 id="dry">1. NguyÃªn táº¯c DRY: Äá»«ng lÃ  chiáº¿c mÃ¡y photocopy</h2>
+                    <p>Trong tuáº§n há»c vá»«a rá»“i trÃªn NetAcad, mÃ¬nh gáº·p má»™t bÃ i táº­p yÃªu cáº§u tÃ­nh thuáº¿ cho 10 loáº¡i máº·t hÃ ng khÃ¡c nhau. LÃºc Ä‘áº§u, mÃ¬nh Ä‘á»‹nh copy-paste Ä‘oáº¡n cÃ´ng thá»©c tÃ­nh thuáº¿ 10 láº§n. NhÆ°ng dá»«ng láº¡i má»™t chÃºt, mÃ¬nh nhá»› Ä‘áº¿n nguyÃªn táº¯c <strong>DRY (Don't Repeat Yourself)</strong> mÃ  tháº§y giÃ¡o hay nháº¯c.</p>
+                    <p>HÃ m (Function) ra Ä‘á»i Ä‘á»ƒ giáº£i quyáº¿t viá»‡c nÃ y. Thay vÃ¬ viáº¿t láº¡i logic, mÃ¬nh chá»‰ cáº§n Ä‘á»‹nh nghÄ©a nÃ³ má»™t láº§n vÃ  gá»i tÃªn nÃ³ báº¥t cá»© khi nÃ o cáº§n. NÃ³ giá»‘ng nhÆ° viá»‡c báº¡n cháº¿ táº¡o má»™t cÃ¡i khuÃ´n lÃ m bÃ¡nh, tá»« Ä‘Ã³ báº¡n cÃ³ thá»ƒ táº¡o ra hÃ ng nghÃ¬n chiáº¿c bÃ¡nh giá»‘ng há»‡t nhau mÃ  khÃ´ng cáº§n nhÃ o bá»™t láº¡i tá»« Ä‘áº§u.</p>
 
-                    <h2 id="anatomy">2. Cấu tạo của một hàm: Input, Process và Output</h2>
-                    <p>Khóa học Cisco chia nhỏ hàm ra thành các thành phần cực kỳ dễ hiểu. Hãy tưởng tượng hàm như một cái máy xay sinh tố:</p>
+                    <h2 id="anatomy">2. Cáº¥u táº¡o cá»§a má»™t hÃ m: Input, Process vÃ  Output</h2>
+                    <p>KhÃ³a há»c Cisco chia nhá» hÃ m ra thÃ nh cÃ¡c thÃ nh pháº§n cá»±c ká»³ dá»… hiá»ƒu. HÃ£y tÆ°á»Ÿng tÆ°á»£ng hÃ m nhÆ° má»™t cÃ¡i mÃ¡y xay sinh tá»‘:</p>
                     <ul>
-                        <li><strong>Parameters (Tham số):</strong> Là trái cây bạn bỏ vào máy (Input).</li>
-                        <li><strong>Body (Thân hàm):</strong> Là lưỡi dao đang xay nhuyễn trái cây (Process).</li>
-                        <li><strong>Return (Giá trị trả về):</strong> Là ly sinh tố mát lạnh bạn nhận được (Output).</li>
+                        <li><strong>Parameters (Tham sá»‘):</strong> LÃ  trÃ¡i cÃ¢y báº¡n bá» vÃ o mÃ¡y (Input).</li>
+                        <li><strong>Body (ThÃ¢n hÃ m):</strong> LÃ  lÆ°á»¡i dao Ä‘ang xay nhuyá»…n trÃ¡i cÃ¢y (Process).</li>
+                        <li><strong>Return (GiÃ¡ trá»‹ tráº£ vá»):</strong> LÃ  ly sinh tá»‘ mÃ¡t láº¡nh báº¡n nháº­n Ä‘Æ°á»£c (Output).</li>
                     </ul>
 
                     
 
-                    <h2 id="arrow">3. Arrow Function: Cách viết "cool" của dân Pro</h2>
-                    <p>Có một phần trong JavaScript hiện đại mà mình cực kỳ thích: <strong>Arrow Function</strong> (Hàm mũi tên). Nó giúp rút ngắn cú pháp đến mức tối đa. </p>
+                    <h2 id="arrow">3. Arrow Function: CÃ¡ch viáº¿t "cool" cá»§a dÃ¢n Pro</h2>
+                    <p>CÃ³ má»™t pháº§n trong JavaScript hiá»‡n Ä‘áº¡i mÃ  mÃ¬nh cá»±c ká»³ thÃ­ch: <strong>Arrow Function</strong> (HÃ m mÅ©i tÃªn). NÃ³ giÃºp rÃºt ngáº¯n cÃº phÃ¡p Ä‘áº¿n má»©c tá»‘i Ä‘a. </p>
                     <pre>
                         <code>
-// Cách viết truyền thống
+// CÃ¡ch viáº¿t truyá»n thá»‘ng
 function chaoHoi(ten) {
-    return "Xin chào " + ten;
+    return "Xin chÃ o " + ten;
 }
 
-// Cách viết Arrow Function
-const chaoHoi = (ten) => `Xin chào ${ten}`;
+// CÃ¡ch viáº¿t Arrow Function
+const chaoHoi = (ten) => `Xin chÃ o ${ten}`;
                         </code>
                     </pre>
-                    <p>Là sinh viên, dùng cái này cảm thấy mình "pro" hơn hẳn khi nhìn vào màn hình code!</p>
+                    <p>LÃ  sinh viÃªn, dÃ¹ng cÃ¡i nÃ y cáº£m tháº¥y mÃ¬nh "pro" hÆ¡n háº³n khi nhÃ¬n vÃ o mÃ n hÃ¬nh code!</p>
 
-                    <h2 id="scope">4. Local vs Global Scope: Biến này của ai?</h2>
-                    <p>Đây là phần khiến mình đau đầu nhất. Có những biến mình khai báo trong hàm nhưng ra ngoài lại không dùng được (Local Scope). Khóa học giải thích rất kỹ về "phạm vi hoạt động" này. </p>
+                    <h2 id="scope">4. Local vs Global Scope: Biáº¿n nÃ y cá»§a ai?</h2>
+                    <p>ÄÃ¢y lÃ  pháº§n khiáº¿n mÃ¬nh Ä‘au Ä‘áº§u nháº¥t. CÃ³ nhá»¯ng biáº¿n mÃ¬nh khai bÃ¡o trong hÃ m nhÆ°ng ra ngoÃ i láº¡i khÃ´ng dÃ¹ng Ä‘Æ°á»£c (Local Scope). KhÃ³a há»c giáº£i thÃ­ch ráº¥t ká»¹ vá» "pháº¡m vi hoáº¡t Ä‘á»™ng" nÃ y. </p>
                     
                     
 
-                    <p>Góc nhìn sinh viên: <em>"Đừng mang đồ đạc cá nhân (biến cục bộ) ra ngoài phòng khách (toàn cục) nếu bạn không muốn gây ra mớ hỗn độn!"</em> Việc hiểu rõ Scope giúp mình tránh được hàng tá lỗi trời ơi đất hỡi khi làm bài thi cuối chương.</p>
+                    <p>GÃ³c nhÃ¬n sinh viÃªn: <em>"Äá»«ng mang Ä‘á»“ Ä‘áº¡c cÃ¡ nhÃ¢n (biáº¿n cá»¥c bá»™) ra ngoÃ i phÃ²ng khÃ¡ch (toÃ n cá»¥c) náº¿u báº¡n khÃ´ng muá»‘n gÃ¢y ra má»› há»—n Ä‘á»™n!"</em> Viá»‡c hiá»ƒu rÃµ Scope giÃºp mÃ¬nh trÃ¡nh Ä‘Æ°á»£c hÃ ng tÃ¡ lá»—i trá»i Æ¡i Ä‘áº¥t há»¡i khi lÃ m bÃ i thi cuá»‘i chÆ°Æ¡ng.</p>
 
-                    <h2 id="ket-luan">5. Lời kết: Code ít hơn, làm được nhiều hơn</h2>
-                    <p>Học về hàm là bước ngoặt thực sự. Nó dạy mình tư duy <strong>Module</strong> — chia nhỏ một bài toán lớn thành những phần việc nhỏ dễ quản lý. Đây là nền tảng để mình chuẩn bị bước sang học về Class và Lập trình hướng đối tượng ở những chương sau.</p>
-                    <p>Cảm ơn các bạn đã đồng hành cùng mình đến bài số 4. Ở bài tới, chúng ta sẽ bắt đầu xử lý những tình huống thực tế hơn: <strong>Xử lý lỗi và Debug</strong>. Không ai viết code mà không có lỗi cả, quan trọng là cách chúng ta đối mặt với nó!</p>
+                    <h2 id="ket-luan">5. Lá»i káº¿t: Code Ã­t hÆ¡n, lÃ m Ä‘Æ°á»£c nhiá»u hÆ¡n</h2>
+                    <p>Há»c vá» hÃ m lÃ  bÆ°á»›c ngoáº·t thá»±c sá»±. NÃ³ dáº¡y mÃ¬nh tÆ° duy <strong>Module</strong> â€” chia nhá» má»™t bÃ i toÃ¡n lá»›n thÃ nh nhá»¯ng pháº§n viá»‡c nhá» dá»… quáº£n lÃ½. ÄÃ¢y lÃ  ná»n táº£ng Ä‘á»ƒ mÃ¬nh chuáº©n bá»‹ bÆ°á»›c sang há»c vá» Class vÃ  Láº­p trÃ¬nh hÆ°á»›ng Ä‘á»‘i tÆ°á»£ng á»Ÿ nhá»¯ng chÆ°Æ¡ng sau.</p>
+                    <p>Cáº£m Æ¡n cÃ¡c báº¡n Ä‘Ã£ Ä‘á»“ng hÃ nh cÃ¹ng mÃ¬nh Ä‘áº¿n bÃ i sá»‘ 4. á»ž bÃ i tá»›i, chÃºng ta sáº½ báº¯t Ä‘áº§u xá»­ lÃ½ nhá»¯ng tÃ¬nh huá»‘ng thá»±c táº¿ hÆ¡n: <strong>Xá»­ lÃ½ lá»—i vÃ  Debug</strong>. KhÃ´ng ai viáº¿t code mÃ  khÃ´ng cÃ³ lá»—i cáº£, quan trá»ng lÃ  cÃ¡ch chÃºng ta Ä‘á»‘i máº·t vá»›i nÃ³!</p>
 
                 </article>
             </div>
@@ -107,14 +107,14 @@ const chaoHoi = (ten) => `Xin chào ${ten}`;
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
                 <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #4caf50;">
-                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
-                    <p>Bạn có thích dùng Arrow Function không hay vẫn trung thành với cách viết truyền thống? Hãy chia sẻ bên dưới nhé, mình rất tò mò về phong cách code của các bạn!</p>
+                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
+                    <p>Báº¡n cÃ³ thÃ­ch dÃ¹ng Arrow Function khÃ´ng hay váº«n trung thÃ nh vá»›i cÃ¡ch viáº¿t truyá»n thá»‘ng? HÃ£y chia sáº» bÃªn dÆ°á»›i nhÃ©, mÃ¬nh ráº¥t tÃ² mÃ² vá» phong cÃ¡ch code cá»§a cÃ¡c báº¡n!</p>
                 </div>
                 
                 <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog3.html" style="text-decoration: none; color: #666;">← Bài 3: Mảng & Đối tượng</a>
+                    <a href="Blog3.html" style="text-decoration: none; color: #666;">â† BÃ i 3: Máº£ng & Äá»‘i tÆ°á»£ng</a>
                     <a href="Blog5.html" style="background: #4caf50; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiếp theo: Bài 5 - Tư duy OOP &rarr;
+                        Tiáº¿p theo: BÃ i 5 - TÆ° duy OOP &rarr;
                     </a>
                 </div>
             </div>
@@ -123,7 +123,7 @@ const chaoHoi = (ten) => `Xin chào ${ten}`;
 
     <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
         <div class="container text-center">
-            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <p>&copy; 2025 ThÃ nh Äáº¡t Blog - Há»c Ä‘á»ƒ xÃ¢y dá»±ng tÆ°Æ¡ng lai</p>
             <div style="margin-top: 1rem;">
                 <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
                 <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
@@ -132,17 +132,18 @@ const chaoHoi = (ten) => `Xin chào ${ten}`;
         </div>
     </footer>
     <script>
-    // Chọn phần tử có class là 'logo'
+    // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
 
-    // Thêm sự kiện click
+    // ThÃªm sá»± kiá»‡n click
     logoElement.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
-        window.location.href = 'index.html'; // Điều hướng về trang chủ
+        e.preventDefault(); // NgÄƒn cháº·n hÃ nh vi máº·c Ä‘á»‹nh náº¿u cÃ³
+        window.location.href = 'index.html'; // Äiá»u hÆ°á»›ng vá» trang chá»§
     });
 
-    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    // ThÃªm style con trá» chuá»™t Ä‘á»ƒ ngÆ°á»i dÃ¹ng biáº¿t cÃ³ thá»ƒ click Ä‘Æ°á»£c
     logoElement.style.cursor = 'pointer';
 </script>
 </body>
 </html>
+

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-<head>
+<head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 7: Lập Trình Bất Đồng Bộ - Chờ Đợi Không Còn Là Nỗi Lo | Blog Thành Đạt</title>
-    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Khám phá bí mật đằng sau Callback, Promises và Async/Await giúp web chạy mượt mà.">
+    <title>BÃ i 7: Láº­p TrÃ¬nh Báº¥t Äá»“ng Bá»™ - Chá» Äá»£i KhÃ´ng CÃ²n LÃ  Ná»—i Lo | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 2: KhÃ¡m phÃ¡ bÃ­ máº­t Ä‘áº±ng sau Callback, Promises vÃ  Async/Await giÃºp web cháº¡y mÆ°á»£t mÃ .">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -13,13 +13,13 @@
 
     <header id="main-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <a href="index.html" class="logo">THÃ€NH Äáº T BLOG</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html" class="nav-link">Trang Chá»§</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li> 
-                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="cta-nav-link">LiÃªn Há»‡</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,13 +28,13 @@
     <main>
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
-                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
-                <h1 class="post-title-main">Bài 7: Lập Trình Bất Đồng Bộ - Chờ Đợi Không Còn Là Nỗi Lo</h1>
+                <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
+                <h1 class="post-title-main">BÃ i 7: Láº­p TrÃ¬nh Báº¥t Äá»“ng Bá»™ - Chá» Äá»£i KhÃ´ng CÃ²n LÃ  Ná»—i Lo</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">📅 16 Tháng 12, 2025</span>
-                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
-                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                    <span class="meta-item">ðŸ“… 16 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
+                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 2</span>
                 </div>
             </div>
             
@@ -47,52 +47,52 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Nội dung bài viết</h4>
+                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
                     <ul>
-                        <li><a href="#event-loop">1. Event Loop: Bí mật của "người đa năng"</a></li>
-                        <li><a href="#callback">2. Callback: Đừng để rơi vào "địa ngục"</a></li>
-                        <li><a href="#promises">3. Promises: Lời hứa của tương lai</a></li>
-                        <li><a href="#async-await">4. Async/Await: Viết code bất đồng bộ như đọc truyện</a></li>
-                        <li><a href="#ket-luan">5. Cảm nhận: Đẳng cấp mới của lập trình viên</a></li>
+                        <li><a href="#event-loop">1. Event Loop: BÃ­ máº­t cá»§a "ngÆ°á»i Ä‘a nÄƒng"</a></li>
+                        <li><a href="#callback">2. Callback: Äá»«ng Ä‘á»ƒ rÆ¡i vÃ o "Ä‘á»‹a ngá»¥c"</a></li>
+                        <li><a href="#promises">3. Promises: Lá»i há»©a cá»§a tÆ°Æ¡ng lai</a></li>
+                        <li><a href="#async-await">4. Async/Await: Viáº¿t code báº¥t Ä‘á»“ng bá»™ nhÆ° Ä‘á»c truyá»‡n</a></li>
+                        <li><a href="#ket-luan">5. Cáº£m nháº­n: Äáº³ng cáº¥p má»›i cá»§a láº­p trÃ¬nh viÃªn</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="event-loop">1. Event Loop: Bí mật của "người đa năng"</h2>
-                    <p>Trong bài học của Cisco, mình bị ám ảnh bởi câu hỏi: JavaScript là đơn luồng (Single-threaded), vậy làm sao nó có thể vừa tải dữ liệu, vừa cho người dùng nhấn nút? </p>
-                    <p>Câu trả lời nằm ở <strong>Event Loop</strong>. Hãy tưởng tượng bạn đi ăn ở một nhà hàng fast-food. Nhân viên nhận order (gọi API), đưa bạn một cái máy báo rung (Promise), sau đó họ phục vụ người tiếp theo. Khi món ăn xong, máy rung lên và bạn quay lại lấy. Đó chính là cách JS vận hành!</p>
+                    <h2 id="event-loop">1. Event Loop: BÃ­ máº­t cá»§a "ngÆ°á»i Ä‘a nÄƒng"</h2>
+                    <p>Trong bÃ i há»c cá»§a Cisco, mÃ¬nh bá»‹ Ã¡m áº£nh bá»Ÿi cÃ¢u há»i: JavaScript lÃ  Ä‘Æ¡n luá»“ng (Single-threaded), váº­y lÃ m sao nÃ³ cÃ³ thá»ƒ vá»«a táº£i dá»¯ liá»‡u, vá»«a cho ngÆ°á»i dÃ¹ng nháº¥n nÃºt? </p>
+                    <p>CÃ¢u tráº£ lá»i náº±m á»Ÿ <strong>Event Loop</strong>. HÃ£y tÆ°á»Ÿng tÆ°á»£ng báº¡n Ä‘i Äƒn á»Ÿ má»™t nhÃ  hÃ ng fast-food. NhÃ¢n viÃªn nháº­n order (gá»i API), Ä‘Æ°a báº¡n má»™t cÃ¡i mÃ¡y bÃ¡o rung (Promise), sau Ä‘Ã³ há» phá»¥c vá»¥ ngÆ°á»i tiáº¿p theo. Khi mÃ³n Äƒn xong, mÃ¡y rung lÃªn vÃ  báº¡n quay láº¡i láº¥y. ÄÃ³ chÃ­nh lÃ  cÃ¡ch JS váº­n hÃ nh!</p>
 
                     
 
-                    <h2 id="callback">2. Callback: Đừng để rơi vào "địa ngục"</h2>
-                    <p>Callback là cách cổ điển nhất. Bạn đưa một cái hàm này vào một cái hàm kia và dặn: "Xong việc thì gọi cái này nhé". </p>
-                    <p>Nhưng mình đã nếm mùi <strong>Callback Hell</strong> khi làm bài tập lồng 3-4 tác vụ liên tiếp. Code bắt đầu thụt vào như một cái mũi tên (Pyramid of Doom), cực kỳ khó đọc và dễ nhầm lẫn. Sinh viên chúng mình sợ nhất là lúc debug đống này!</p>
+                    <h2 id="callback">2. Callback: Äá»«ng Ä‘á»ƒ rÆ¡i vÃ o "Ä‘á»‹a ngá»¥c"</h2>
+                    <p>Callback lÃ  cÃ¡ch cá»• Ä‘iá»ƒn nháº¥t. Báº¡n Ä‘Æ°a má»™t cÃ¡i hÃ m nÃ y vÃ o má»™t cÃ¡i hÃ m kia vÃ  dáº·n: "Xong viá»‡c thÃ¬ gá»i cÃ¡i nÃ y nhÃ©". </p>
+                    <p>NhÆ°ng mÃ¬nh Ä‘Ã£ náº¿m mÃ¹i <strong>Callback Hell</strong> khi lÃ m bÃ i táº­p lá»“ng 3-4 tÃ¡c vá»¥ liÃªn tiáº¿p. Code báº¯t Ä‘áº§u thá»¥t vÃ o nhÆ° má»™t cÃ¡i mÅ©i tÃªn (Pyramid of Doom), cá»±c ká»³ khÃ³ Ä‘á»c vÃ  dá»… nháº§m láº«n. Sinh viÃªn chÃºng mÃ¬nh sá»£ nháº¥t lÃ  lÃºc debug Ä‘á»‘ng nÃ y!</p>
 
-                    <h2 id="promises">3. Promises: Lời hứa của tương lai</h2>
-                    <p>Khóa học Cisco Essentials 2 giải cứu mình bằng <strong>Promises</strong>. Thay vì lồng code, chúng ta sử dụng chuỗi <code>.then()</code> và <code>.catch()</code>. Nó giống như một lời cam kết: "Tôi hứa sẽ trả về kết quả, nếu thất bại tôi sẽ báo lỗi". Code trông đã sạch hơn rất nhiều.</p>
+                    <h2 id="promises">3. Promises: Lá»i há»©a cá»§a tÆ°Æ¡ng lai</h2>
+                    <p>KhÃ³a há»c Cisco Essentials 2 giáº£i cá»©u mÃ¬nh báº±ng <strong>Promises</strong>. Thay vÃ¬ lá»“ng code, chÃºng ta sá»­ dá»¥ng chuá»—i <code>.then()</code> vÃ  <code>.catch()</code>. NÃ³ giá»‘ng nhÆ° má»™t lá»i cam káº¿t: "TÃ´i há»©a sáº½ tráº£ vá» káº¿t quáº£, náº¿u tháº¥t báº¡i tÃ´i sáº½ bÃ¡o lá»—i". Code trÃ´ng Ä‘Ã£ sáº¡ch hÆ¡n ráº¥t nhiá»u.</p>
 
                     
 
-                    <h2 id="async-await">4. Async/Await: Viết code bất đồng bộ như đọc truyện</h2>
-                    <p>Đây là "đỉnh cao" của lập trình hiện đại. Với <code>async</code> và <code>await</code>, mình có thể viết những tác vụ chờ đợi mà nhìn nó chẳng khác gì code tuần tự thông thường. </p>
+                    <h2 id="async-await">4. Async/Await: Viáº¿t code báº¥t Ä‘á»“ng bá»™ nhÆ° Ä‘á»c truyá»‡n</h2>
+                    <p>ÄÃ¢y lÃ  "Ä‘á»‰nh cao" cá»§a láº­p trÃ¬nh hiá»‡n Ä‘áº¡i. Vá»›i <code>async</code> vÃ  <code>await</code>, mÃ¬nh cÃ³ thá»ƒ viáº¿t nhá»¯ng tÃ¡c vá»¥ chá» Ä‘á»£i mÃ  nhÃ¬n nÃ³ cháº³ng khÃ¡c gÃ¬ code tuáº§n tá»± thÃ´ng thÆ°á»ng. </p>
                     <pre>
                         <code>
 async function hienThiThongTin() {
     try {
-        const data = await fetchUserData(); // Chờ lấy dữ liệu xong
-        console.log(data); // Rồi mới hiện ra
+        const data = await fetchUserData(); // Chá» láº¥y dá»¯ liá»‡u xong
+        console.log(data); // Rá»“i má»›i hiá»‡n ra
     } catch (err) {
-        console.error("Lỗi rồi bạn ơi!");
+        console.error("Lá»—i rá»“i báº¡n Æ¡i!");
     }
 }
                         </code>
                     </pre>
-                    <p>Góc nhìn sinh viên: <em>"Async/await giúp mình tập trung vào logic bài toán thay vì phải vặn óc suy nghĩ xem code nào chạy trước, code nào chạy sau."</em></p>
+                    <p>GÃ³c nhÃ¬n sinh viÃªn: <em>"Async/await giÃºp mÃ¬nh táº­p trung vÃ o logic bÃ i toÃ¡n thay vÃ¬ pháº£i váº·n Ã³c suy nghÄ© xem code nÃ o cháº¡y trÆ°á»›c, code nÃ o cháº¡y sau."</em></p>
 
-                    <h2 id="ket-luan">5. Cảm nhận: Đẳng cấp mới của lập trình viên</h2>
-                    <p>Học xong bài 7, mình thấy mình như được "nâng cấp" lên một trình độ mới. Lập trình bất đồng bộ không chỉ là cú pháp, nó là tư duy về hiệu suất. </p>
-                    <p>Hẹn gặp các bạn ở Bài 8, bài viết thực chiến nhất: <strong>DOM Manipulation</strong>. Chúng ta sẽ dùng tất cả những gì đã học từ bài 1 tới giờ để làm cho trang web "biến hình" theo ý muốn!</p>
+                    <h2 id="ket-luan">5. Cáº£m nháº­n: Äáº³ng cáº¥p má»›i cá»§a láº­p trÃ¬nh viÃªn</h2>
+                    <p>Há»c xong bÃ i 7, mÃ¬nh tháº¥y mÃ¬nh nhÆ° Ä‘Æ°á»£c "nÃ¢ng cáº¥p" lÃªn má»™t trÃ¬nh Ä‘á»™ má»›i. Láº­p trÃ¬nh báº¥t Ä‘á»“ng bá»™ khÃ´ng chá»‰ lÃ  cÃº phÃ¡p, nÃ³ lÃ  tÆ° duy vá» hiá»‡u suáº¥t. </p>
+                    <p>Háº¹n gáº·p cÃ¡c báº¡n á»Ÿ BÃ i 8, bÃ i viáº¿t thá»±c chiáº¿n nháº¥t: <strong>DOM Manipulation</strong>. ChÃºng ta sáº½ dÃ¹ng táº¥t cáº£ nhá»¯ng gÃ¬ Ä‘Ã£ há»c tá»« bÃ i 1 tá»›i giá» Ä‘á»ƒ lÃ m cho trang web "biáº¿n hÃ¬nh" theo Ã½ muá»‘n!</p>
 
                 </article>
             </div>
@@ -101,14 +101,14 @@ async function hienThiThongTin() {
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
                 <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #3f51b5;">
-                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
-                    <p>Lần đầu tiên làm bài Lab về Async, mình đã quên dùng <code>await</code> và nhận về kết quả là một đống <code>Promise { &lt;pending&gt; }</code>. Bạn đã từng gặp "lời hứa treo" như mình chưa? Để lại bình luận nhé!</p>
+                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
+                    <p>Láº§n Ä‘áº§u tiÃªn lÃ m bÃ i Lab vá» Async, mÃ¬nh Ä‘Ã£ quÃªn dÃ¹ng <code>await</code> vÃ  nháº­n vá» káº¿t quáº£ lÃ  má»™t Ä‘á»‘ng <code>Promise { &lt;pending&gt; }</code>. Báº¡n Ä‘Ã£ tá»«ng gáº·p "lá»i há»©a treo" nhÆ° mÃ¬nh chÆ°a? Äá»ƒ láº¡i bÃ¬nh luáº­n nhÃ©!</p>
                 </div>
                 
                 <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog6.html" style="text-decoration: none; color: #666;">← Bài 6: Xử lý lỗi</a>
+                    <a href="Blog6.html" style="text-decoration: none; color: #666;">â† BÃ i 6: Xá»­ lÃ½ lá»—i</a>
                     <a href="Blog8.html" style="background: #3f51b5; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiếp theo: Bài 8 - DOM Manipulation &rarr;
+                        Tiáº¿p theo: BÃ i 8 - DOM Manipulation &rarr;
                     </a>
                 </div>
             </div>
@@ -117,7 +117,7 @@ async function hienThiThongTin() {
 
     <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
         <div class="container text-center">
-            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <p>&copy; 2025 ThÃ nh Äáº¡t Blog - Há»c Ä‘á»ƒ xÃ¢y dá»±ng tÆ°Æ¡ng lai</p>
             <div style="margin-top: 1rem;">
                 <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
                 <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
@@ -126,17 +126,18 @@ async function hienThiThongTin() {
         </div>
     </footer>
     <script>
-    // Chọn phần tử có class là 'logo'
+    // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
 
-    // Thêm sự kiện click
+    // ThÃªm sá»± kiá»‡n click
     logoElement.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
-        window.location.href = 'index.html'; // Điều hướng về trang chủ
+        e.preventDefault(); // NgÄƒn cháº·n hÃ nh vi máº·c Ä‘á»‹nh náº¿u cÃ³
+        window.location.href = 'index.html'; // Äiá»u hÆ°á»›ng vá» trang chá»§
     });
 
-    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    // ThÃªm style con trá» chuá»™t Ä‘á»ƒ ngÆ°á»i dÃ¹ng biáº¿t cÃ³ thá»ƒ click Ä‘Æ°á»£c
     logoElement.style.cursor = 'pointer';
 </script>
 </body>
 </html>
+

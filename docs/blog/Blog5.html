@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-<head>
+<head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 5: Tư Duy OOP - Khi Code Không Chỉ Là Những Dòng Lệnh | Blog Thành Đạt</title>
-    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Khám phá thế giới lập trình hướng đối tượng (OOP) qua Class, Object và các tính chất cốt lõi.">
+    <title>BÃ i 5: TÆ° Duy OOP - Khi Code KhÃ´ng Chá»‰ LÃ  Nhá»¯ng DÃ²ng Lá»‡nh | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 2: KhÃ¡m phÃ¡ tháº¿ giá»›i láº­p trÃ¬nh hÆ°á»›ng Ä‘á»‘i tÆ°á»£ng (OOP) qua Class, Object vÃ  cÃ¡c tÃ­nh cháº¥t cá»‘t lÃµi.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -13,13 +13,13 @@
 
     <header id="main-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <a href="index.html" class="logo">THÃ€NH Äáº T BLOG</a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html" class="nav-link">Trang Chá»§</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li> 
-                    <li><a href="contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="cta-nav-link">LiÃªn Há»‡</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,13 +28,13 @@
     <main>
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
-                <p class="pre-title"><a href="blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
-                <h1 class="post-title-main">Bài 5: Tư Duy OOP - Khi Code Không Chỉ Là Những Dòng Lệnh</h1>
+                <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
+                <h1 class="post-title-main">BÃ i 5: TÆ° Duy OOP - Khi Code KhÃ´ng Chá»‰ LÃ  Nhá»¯ng DÃ²ng Lá»‡nh</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">📅 14 Tháng 12, 2025</span>
-                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
-                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                    <span class="meta-item">ðŸ“… 14 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
+                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 2</span>
                 </div>
             </div>
             
@@ -47,42 +47,42 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Nội dung bài viết</h4>
+                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
                     <ul>
-                        <li><a href="#class-object">1. Class & Object: Bản thiết kế và Ngôi nhà</a></li>
-                        <li><a href="#encapsulation">2. Tính đóng gói: Giữ bí mật cho dữ liệu</a></li>
-                        <li><a href="#inheritance">3. Tính kế thừa: "Cha truyền con nối" trong Code</a></li>
-                        <li><a href="#prototype">4. Prototype: Bí mật đằng sau diện mạo của JS</a></li>
-                        <li><a href="#ket-luan">5. Cảm nhận: Khi lập trình trở nên thực tế hơn</a></li>
+                        <li><a href="#class-object">1. Class & Object: Báº£n thiáº¿t káº¿ vÃ  NgÃ´i nhÃ </a></li>
+                        <li><a href="#encapsulation">2. TÃ­nh Ä‘Ã³ng gÃ³i: Giá»¯ bÃ­ máº­t cho dá»¯ liá»‡u</a></li>
+                        <li><a href="#inheritance">3. TÃ­nh káº¿ thá»«a: "Cha truyá»n con ná»‘i" trong Code</a></li>
+                        <li><a href="#prototype">4. Prototype: BÃ­ máº­t Ä‘áº±ng sau diá»‡n máº¡o cá»§a JS</a></li>
+                        <li><a href="#ket-luan">5. Cáº£m nháº­n: Khi láº­p trÃ¬nh trá»Ÿ nÃªn thá»±c táº¿ hÆ¡n</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="class-object">1. Class & Object: Bản thiết kế và Ngôi nhà</h2>
-                    <p>Trong khóa học Cisco Essentials 2, mình bắt đầu tiếp cận với khái niệm <strong>Class</strong>. Nếu trước đây mình tạo từng đối tượng sinh viên riêng lẻ, thì nay mình tạo ra một "bản thiết kế" chung.</p>
-                    <p>Hãy tưởng tượng <strong>Class</strong> là một bản vẽ kỹ thuật của một ngôi nhà, và <strong>Object</strong> chính là những ngôi nhà thực sự được xây nên từ bản vẽ đó. Chúng có cùng cấu trúc nhưng màu sơn hoặc nội thất (dữ liệu) có thể khác nhau.</p>
+                    <h2 id="class-object">1. Class & Object: Báº£n thiáº¿t káº¿ vÃ  NgÃ´i nhÃ </h2>
+                    <p>Trong khÃ³a há»c Cisco Essentials 2, mÃ¬nh báº¯t Ä‘áº§u tiáº¿p cáº­n vá»›i khÃ¡i niá»‡m <strong>Class</strong>. Náº¿u trÆ°á»›c Ä‘Ã¢y mÃ¬nh táº¡o tá»«ng Ä‘á»‘i tÆ°á»£ng sinh viÃªn riÃªng láº», thÃ¬ nay mÃ¬nh táº¡o ra má»™t "báº£n thiáº¿t káº¿" chung.</p>
+                    <p>HÃ£y tÆ°á»Ÿng tÆ°á»£ng <strong>Class</strong> lÃ  má»™t báº£n váº½ ká»¹ thuáº­t cá»§a má»™t ngÃ´i nhÃ , vÃ  <strong>Object</strong> chÃ­nh lÃ  nhá»¯ng ngÃ´i nhÃ  thá»±c sá»± Ä‘Æ°á»£c xÃ¢y nÃªn tá»« báº£n váº½ Ä‘Ã³. ChÃºng cÃ³ cÃ¹ng cáº¥u trÃºc nhÆ°ng mÃ u sÆ¡n hoáº·c ná»™i tháº¥t (dá»¯ liá»‡u) cÃ³ thá»ƒ khÃ¡c nhau.</p>
 
                     
 
-                    <h2 id="encapsulation">2. Tính đóng gói: Giữ bí mật cho dữ liệu</h2>
-                    <p>Có một điều mình cực tâm đắc khi học OOP là <strong>Encapsulation (Tính đóng gói)</strong>. Nó giúp mình che giấu những logic phức tạp bên trong và chỉ đưa ra những cái "nút" đơn giản cho người dùng sử dụng. </p>
-                    <p>Giống như việc bạn lái xe ô tô, bạn chỉ cần biết đạp ga và phanh, còn việc động cơ đốt xăng thế nào thì đã được "đóng gói" kỹ càng dưới nắp capo. Điều này giúp code của mình an toàn và dễ bảo trì hơn rất nhiều.</p>
+                    <h2 id="encapsulation">2. TÃ­nh Ä‘Ã³ng gÃ³i: Giá»¯ bÃ­ máº­t cho dá»¯ liá»‡u</h2>
+                    <p>CÃ³ má»™t Ä‘iá»u mÃ¬nh cá»±c tÃ¢m Ä‘áº¯c khi há»c OOP lÃ  <strong>Encapsulation (TÃ­nh Ä‘Ã³ng gÃ³i)</strong>. NÃ³ giÃºp mÃ¬nh che giáº¥u nhá»¯ng logic phá»©c táº¡p bÃªn trong vÃ  chá»‰ Ä‘Æ°a ra nhá»¯ng cÃ¡i "nÃºt" Ä‘Æ¡n giáº£n cho ngÆ°á»i dÃ¹ng sá»­ dá»¥ng. </p>
+                    <p>Giá»‘ng nhÆ° viá»‡c báº¡n lÃ¡i xe Ã´ tÃ´, báº¡n chá»‰ cáº§n biáº¿t Ä‘áº¡p ga vÃ  phanh, cÃ²n viá»‡c Ä‘á»™ng cÆ¡ Ä‘á»‘t xÄƒng tháº¿ nÃ o thÃ¬ Ä‘Ã£ Ä‘Æ°á»£c "Ä‘Ã³ng gÃ³i" ká»¹ cÃ ng dÆ°á»›i náº¯p capo. Äiá»u nÃ y giÃºp code cá»§a mÃ¬nh an toÃ n vÃ  dá»… báº£o trÃ¬ hÆ¡n ráº¥t nhiá»u.</p>
 
-                    <h2 id="inheritance">3. Tính kế thừa: "Cha truyền con nối" trong Code</h2>
-                    <p><strong>Inheritance (Tính kế thừa)</strong> là một phép màu giúp sinh viên chúng mình bớt phải gõ code lại từ đầu. Ví dụ: Mình có một Class <code>Nguoi</code>, sau đó mình tạo thêm Class <code>SinhVien</code> kế thừa từ <code>Nguoi</code>. </p>
-                    <p>Tất cả những thuộc tính như tên, tuổi, ngày sinh không cần phải viết lại nữa. <code>SinhVien</code> mặc nhiên có hết và chỉ việc thêm vào những thứ riêng biệt như <code>maSinhVien</code> hay <code>diemGPA</code>. Cực kỳ tiện lợi!</p>
+                    <h2 id="inheritance">3. TÃ­nh káº¿ thá»«a: "Cha truyá»n con ná»‘i" trong Code</h2>
+                    <p><strong>Inheritance (TÃ­nh káº¿ thá»«a)</strong> lÃ  má»™t phÃ©p mÃ u giÃºp sinh viÃªn chÃºng mÃ¬nh bá»›t pháº£i gÃµ code láº¡i tá»« Ä‘áº§u. VÃ­ dá»¥: MÃ¬nh cÃ³ má»™t Class <code>Nguoi</code>, sau Ä‘Ã³ mÃ¬nh táº¡o thÃªm Class <code>SinhVien</code> káº¿ thá»«a tá»« <code>Nguoi</code>. </p>
+                    <p>Táº¥t cáº£ nhá»¯ng thuá»™c tÃ­nh nhÆ° tÃªn, tuá»•i, ngÃ y sinh khÃ´ng cáº§n pháº£i viáº¿t láº¡i ná»¯a. <code>SinhVien</code> máº·c nhiÃªn cÃ³ háº¿t vÃ  chá»‰ viá»‡c thÃªm vÃ o nhá»¯ng thá»© riÃªng biá»‡t nhÆ° <code>maSinhVien</code> hay <code>diemGPA</code>. Cá»±c ká»³ tiá»‡n lá»£i!</p>
 
                     
 
-                    <h2 id="prototype">4. Prototype: Bí mật đằng sau diện mạo của JS</h2>
-                    <p>Dù dùng <code>class</code> trông rất giống Java hay C#, nhưng Cisco chỉ ra rằng bản chất JavaScript vẫn là <strong>Prototype-based</strong>. Ban đầu mình hơi "lú" chỗ này, nhưng sau vài bài Lab, mình nhận ra Prototype chính là cơ chế mà các đối tượng "mượn" phương thức của nhau. </p>
-                    <p>Hiểu được Prototype là bạn đã nắm được "linh hồn" của JavaScript, giúp bạn giải thích được tại sao mọi thứ trong JS đều có thể coi là một đối tượng.</p>
+                    <h2 id="prototype">4. Prototype: BÃ­ máº­t Ä‘áº±ng sau diá»‡n máº¡o cá»§a JS</h2>
+                    <p>DÃ¹ dÃ¹ng <code>class</code> trÃ´ng ráº¥t giá»‘ng Java hay C#, nhÆ°ng Cisco chá»‰ ra ráº±ng báº£n cháº¥t JavaScript váº«n lÃ  <strong>Prototype-based</strong>. Ban Ä‘áº§u mÃ¬nh hÆ¡i "lÃº" chá»— nÃ y, nhÆ°ng sau vÃ i bÃ i Lab, mÃ¬nh nháº­n ra Prototype chÃ­nh lÃ  cÆ¡ cháº¿ mÃ  cÃ¡c Ä‘á»‘i tÆ°á»£ng "mÆ°á»£n" phÆ°Æ¡ng thá»©c cá»§a nhau. </p>
+                    <p>Hiá»ƒu Ä‘Æ°á»£c Prototype lÃ  báº¡n Ä‘Ã£ náº¯m Ä‘Æ°á»£c "linh há»“n" cá»§a JavaScript, giÃºp báº¡n giáº£i thÃ­ch Ä‘Æ°á»£c táº¡i sao má»i thá»© trong JS Ä‘á»u cÃ³ thá»ƒ coi lÃ  má»™t Ä‘á»‘i tÆ°á»£ng.</p>
 
-                    <h2 id="ket-luan">5. Cảm nhận: Khi lập trình trở nên thực tế hơn</h2>
-                    <p>Kết thúc chương về OOP, mình thấy cách mình nhìn nhận một bài toán đã thay đổi. Thay vì nghĩ: "Bước 1 làm gì, bước 2 làm gì", mình sẽ nghĩ: "Hệ thống này có những thực thể nào, chúng tương tác với nhau ra sao?". </p>
-                    <p>Tư duy hướng đối tượng không chỉ giúp mình pass bài thi của Cisco mà còn là nền tảng để sau này mình học các Framework như <strong>React</strong> hay <strong>Angular</strong> một cách dễ dàng hơn.</p>
-                    <p>Hẹn gặp lại các bạn ở Bài 6, nơi chúng ta sẽ học cách đối mặt với những "vị khách không mời" trong code: <strong>Xử lý lỗi và Exception!</strong></p>
+                    <h2 id="ket-luan">5. Cáº£m nháº­n: Khi láº­p trÃ¬nh trá»Ÿ nÃªn thá»±c táº¿ hÆ¡n</h2>
+                    <p>Káº¿t thÃºc chÆ°Æ¡ng vá» OOP, mÃ¬nh tháº¥y cÃ¡ch mÃ¬nh nhÃ¬n nháº­n má»™t bÃ i toÃ¡n Ä‘Ã£ thay Ä‘á»•i. Thay vÃ¬ nghÄ©: "BÆ°á»›c 1 lÃ m gÃ¬, bÆ°á»›c 2 lÃ m gÃ¬", mÃ¬nh sáº½ nghÄ©: "Há»‡ thá»‘ng nÃ y cÃ³ nhá»¯ng thá»±c thá»ƒ nÃ o, chÃºng tÆ°Æ¡ng tÃ¡c vá»›i nhau ra sao?". </p>
+                    <p>TÆ° duy hÆ°á»›ng Ä‘á»‘i tÆ°á»£ng khÃ´ng chá»‰ giÃºp mÃ¬nh pass bÃ i thi cá»§a Cisco mÃ  cÃ²n lÃ  ná»n táº£ng Ä‘á»ƒ sau nÃ y mÃ¬nh há»c cÃ¡c Framework nhÆ° <strong>React</strong> hay <strong>Angular</strong> má»™t cÃ¡ch dá»… dÃ ng hÆ¡n.</p>
+                    <p>Háº¹n gáº·p láº¡i cÃ¡c báº¡n á»Ÿ BÃ i 6, nÆ¡i chÃºng ta sáº½ há»c cÃ¡ch Ä‘á»‘i máº·t vá»›i nhá»¯ng "vá»‹ khÃ¡ch khÃ´ng má»i" trong code: <strong>Xá»­ lÃ½ lá»—i vÃ  Exception!</strong></p>
 
                 </article>
             </div>
@@ -91,14 +91,14 @@
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
                 <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #673ab7;">
-                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
-                    <p>OOP có thể hơi khó nuốt lúc đầu, nhưng một khi đã "thấm", bạn sẽ thấy nó cực kỳ logic. Bạn thấy tính chất nào của OOP là thú vị nhất? Hãy để lại bình luận nhé!</p>
+                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
+                    <p>OOP cÃ³ thá»ƒ hÆ¡i khÃ³ nuá»‘t lÃºc Ä‘áº§u, nhÆ°ng má»™t khi Ä‘Ã£ "tháº¥m", báº¡n sáº½ tháº¥y nÃ³ cá»±c ká»³ logic. Báº¡n tháº¥y tÃ­nh cháº¥t nÃ o cá»§a OOP lÃ  thÃº vá»‹ nháº¥t? HÃ£y Ä‘á»ƒ láº¡i bÃ¬nh luáº­n nhÃ©!</p>
                 </div>
                 
                 <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog4.html" style="text-decoration: none; color: #666;">← Bài 4: Hàm (Function)</a>
+                    <a href="Blog4.html" style="text-decoration: none; color: #666;">â† BÃ i 4: HÃ m (Function)</a>
                     <a href="Blog6.html" style="background: #673ab7; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiếp theo: Bài 6 - Xử lý lỗi &rarr;
+                        Tiáº¿p theo: BÃ i 6 - Xá»­ lÃ½ lá»—i &rarr;
                     </a>
                 </div>
             </div>
@@ -107,7 +107,7 @@
 
     <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
         <div class="container text-center">
-            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <p>&copy; 2025 ThÃ nh Äáº¡t Blog - Há»c Ä‘á»ƒ xÃ¢y dá»±ng tÆ°Æ¡ng lai</p>
             <div style="margin-top: 1rem;">
                 <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
                 <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
@@ -116,17 +116,18 @@
         </div>
     </footer>
     <script>
-    // Chọn phần tử có class là 'logo'
+    // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
 
-    // Thêm sự kiện click
+    // ThÃªm sá»± kiá»‡n click
     logoElement.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
-        window.location.href = 'index.html'; // Điều hướng về trang chủ
+        e.preventDefault(); // NgÄƒn cháº·n hÃ nh vi máº·c Ä‘á»‹nh náº¿u cÃ³
+        window.location.href = 'index.html'; // Äiá»u hÆ°á»›ng vá» trang chá»§
     });
 
-    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    // ThÃªm style con trá» chuá»™t Ä‘á»ƒ ngÆ°á»i dÃ¹ng biáº¿t cÃ³ thá»ƒ click Ä‘Æ°á»£c
     logoElement.style.cursor = 'pointer';
 </script>
 </body>
 </html>
+
