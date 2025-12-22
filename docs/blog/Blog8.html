@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8: DOM Manipulation - Phù Thủy Biến Hóa Trang Web | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials: Cách sử dụng JavaScript để điều khiển HTML/CSS, lắng nghe sự kiện và tạo ra các ứng dụng web tương tác.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="../profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="../blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="../contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="../blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 8: DOM Manipulation - Phù Thủy Biến Hóa Trang Web</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 17 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="../assets/img/blog8-featured.jpg" alt="Thao tác với DOM trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#dom-la-gi">1. DOM Tree: Cây gia phả của trang web</a></li>
+                        <li><a href="#query">2. Tìm kiếm phần tử: Ai là người mình cần?</a></li>
+                        <li><a href="#event">3. Event Listener: Lắng nghe từng nhịp thở của người dùng</a></li>
+                        <li><a href="#practice">4. Mini Project: Ứng dụng To-Do List đầu tay</a></li>
+                        <li><a href="#ket-luan">5. Cảm nhận: Sức mạnh thực sự của Front-end</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="dom-la-gi">1. DOM Tree: Cây gia phả của trang web</h2>
+                    <p>Trong bài học của Cisco, mình được làm quen với khái niệm <strong>Document Object Model (DOM)</strong>. Hãy tưởng tượng trang HTML của bạn là một cái cây, nơi <code>&lt;html&gt;</code> là gốc, <code>&lt;body&gt;</code> là cành lớn, và các thẻ <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> là những chiếc lá.</p>
+                    <p>JavaScript chính là "phù thủy" có thể khiến cái cây này mọc thêm lá, đổi màu hoa hoặc thậm chí là cắt tỉa cành theo ý muốn. Hiểu được cấu trúc cây DOM giúp mình không còn bị lạc lối khi muốn thay đổi một nội dung cụ thể trên trang.</p>
+
+                    
+
+                    <h2 id="query">2. Tìm kiếm phần tử: Ai là người mình cần?</h2>
+                    <p>Để thay đổi một thứ gì đó, trước tiên bạn phải tìm thấy nó. Khóa học dạy mình các phương thức từ cổ điển như <code>getElementById</code> cho đến hiện đại như <code>querySelector</code>.</p>
+                    <p>Góc nhìn sinh viên: <em>"Hãy luôn dùng querySelector nếu bạn muốn code của mình trông gọn gàng và linh hoạt như cách dùng CSS selector vậy!"</em></p>
+
+                    <h2 id="event">3. Event Listener: Lắng nghe từng nhịp thở của người dùng</h2>
+                    <p>Một trang web sẽ thật vô hồn nếu người dùng nhấn vào nút mà không có gì xảy ra. <strong>Event Listener</strong> là cách mình "dạy" trình duyệt biết lắng nghe. Click chuột, di chuột, hay gõ phím – tất cả đều là những tín hiệu để JavaScript bắt đầu hành động.</p>
+                    
+                    <pre>
+                        <code>
+const button = document.querySelector('#myBtn');
+button.addEventListener('click', () => {
+    alert('Chào bạn! Bạn vừa kích hoạt phép thuật của JavaScript!');
+});
+                        </code>
+                    </pre>
+
+                    
+
+                    <h2 id="practice">4. Mini Project: Ứng dụng To-Do List đầu tay</h2>
+                    <p>Bài thực hành cuối chương yêu cầu mình kết hợp Array, Object và DOM để tạo một ứng dụng quản lý công việc (To-Do List). Đây là lúc mình thấy mọi mảnh ghép kiến thức từ Bài 1 đến nay khớp lại với nhau hoàn hảo.</p>
+                    <p>Mình lưu danh sách công việc vào một <strong>Array</strong>, mỗi công việc là một <strong>Object</strong>, và dùng <strong>DOM</strong> để hiển thị chúng lên màn hình. Thật tuyệt vời khi thấy ứng dụng của mình thực sự hoạt động!</p>
+
+                    <h2 id="ket-luan">5. Cảm nhận: Sức mạnh thực sự của Front-end</h2>
+                    <p>Học xong bài 8, mình mới hiểu tại sao JavaScript lại thống trị thế giới Web. Khả năng tương tác trực tiếp với người dùng mang lại một trải nghiệm mượt mà mà không ngôn ngữ nào khác làm được trên trình duyệt.</p>
+                    <p>Chúng ta chỉ còn một bài cuối cùng: <strong>Tổng kết lộ trình</strong>. Mình sẽ chia sẻ về kỳ thi lấy chứng chỉ của Cisco và những hướng đi tiếp theo cho các bạn. Cố lên, chúng ta sắp về đích rồi!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #00d1b2;">
+                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
+                    <p>Thao tác với DOM là phần vui nhất, nhưng cũng dễ tạo ra code "rác" nhất nếu bạn không cẩn thận. Bạn đã thử tạo ra hiệu ứng gì thú vị với DOM chưa? Khoe với mình nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog7.html" style="text-decoration: none; color: #666;">← Bài 7: Bất đồng bộ</a>
+                    <a href="Blog9.html" style="background: #00d1b2; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 9 - Về Đích &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = '../index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

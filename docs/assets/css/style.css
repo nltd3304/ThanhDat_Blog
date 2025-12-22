@@ -1,0 +1,1001 @@
+/* ==================================== */
+/* 0. GLOBAL RESET & TYPOGRAPHY */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Màu sắc - Tông màu trung tính, độ tương phản cao */
+    --primary-color: #0070f3; 
+    --secondary-color: #6c757d; 
+    --dark-color: #171717; 
+    --text-color: #333; 
+    --light-bg: #f7f7f7; 
+    --border-color: #e0e0e0; 
+    
+    /* Font */
+    --main-font: 'Inter', sans-serif;
+    --display-font: 'Playfair Display', serif;
+    
+    /* Spacing */
+    --padding-sm: 1.5rem;
+    --padding-md: 3rem;
+    --padding-lg: 6rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--padding-sm);
+}
+
+.section-padding {
+    padding: var(--padding-lg) 0;
+}
+
+.section-padding-sm {
+    padding: var(--padding-md) 0;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Tiêu đề cấp bậc */
+.pre-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.display-title {
+    font-family: var(--display-font);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: var(--padding-sm);
+}
+
+.section-tag {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0.5rem 0 var(--padding-sm) 0;
+}
+
+
+/* ==================================== */
+/* 1. HEADER & NAVIGATION */
+/* ==================================== */
+#main-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--padding-sm);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.cta-nav-link {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.cta-nav-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* ==================================== */
+/* 2. BUTTONS & UTILITIES */
+/* ==================================== */
+.btn {
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 2px solid transparent; 
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-tertiary {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.btn-tertiary:hover {
+    opacity: 0.8;
+}
+
+
+/* ==================================== */
+/* 3. HERO SECTION (INDEX PAGE) */
+/* ==================================== */
+#hero {
+    background-color: white;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--padding-md);
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin-bottom: var(--padding-md);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* ==================================== */
+/* 4. PROJECTS & BLOG CARDS (INDEX & LISTING PAGES) */
+/* ==================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--padding-md);
+}
+
+.project-card, .blog-card {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.project-tag {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Blog Card Tối Giản (Dùng cho index và blog listing) */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-sm);
+}
+
+.blog-card {
+    padding: 1.5rem;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.blog-card:hover {
+    background-color: #f0f0f0;
+    box-shadow: none;
+    transform: none;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.button-area {
+    margin-top: var(--padding-md);
+}
+
+
+/* ==================================== */
+/* 5. FOOTER */
+/* ==================================== */
+#main-footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: var(--padding-md) 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+}
+
+.footer-cta {
+    text-align: center;
+    padding: var(--padding-md) 0;
+    border-bottom: 1px solid #333;
+}
+
+.footer-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-top: var(--padding-sm);
+}
+
+.copyright {
+    color: var(--border-color);
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: var(--padding-sm);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+
+/* ==================================== */
+/* 6. BLOG PAGE SPECIFIC STYLES (blog.html) */
+/* ==================================== */
+
+/* Thanh tìm kiếm */
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: var(--padding-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input {
+    padding: 0.75rem 1rem;
+    width: 70%;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Bài viết nổi bật (Featured Post Card) */
+.blog-grid-full {
+    margin-top: var(--padding-md);
+}
+
+.featured-post-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-lg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.post-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content-area {
+    padding: var(--padding-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-category {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.featured-post-card h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.featured-post-card .blog-date {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Lưới các bài viết thường trên trang Blog Listing */
+.regular-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-sm);
+}
+
+/* Phân trang */
+.pagination {
+    margin-top: var(--padding-md);
+    padding-top: var(--padding-sm);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.pagination .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/* ==================================== */
+/* 7. PROFILE/CV PAGE SPECIFIC STYLES (profile.html) */
+/* ==================================== */
+
+/* Layout cho phần Profile Hero */
+.about-hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: var(--padding-md);
+    align-items: center;
+}
+
+.about-avatar {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Kỹ năng */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--padding-md);
+    margin-top: var(--padding-md);
+    text-align: left;
+}
+
+.skill-group h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.skill-group ul {
+    list-style: none;
+}
+
+.skill-group ul li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Timeline Kinh nghiệm/Học vấn */
+.timeline {
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+    position: relative;
+    padding-left: 0px; 
+}
+
+/* Đường kẻ dọc (Timeline line) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -150px; 
+    top: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    width: 100px;
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+/* Điểm tròn trên timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: -15px; 
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content .company {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-color);
+}
+.timeline-content {
+    padding-left: 40px; 
+}
+
+
+/* ==================================== */
+/* 8. CONTACT PAGE SPECIFIC STYLES (contact.html) */
+/* ==================================== */
+
+.contact-grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form chiếm 2/3, Info chiếm 1/3 */
+    gap: var(--padding-lg);
+}
+
+.contact-form-area {
+    padding-right: var(--padding-md);
+    border-right: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+/* Contact Info */
+.info-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.info-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-value a, .info-value {
+    font-size: 1.15rem;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.social-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+}
+
+
+/* ==================================== */
+/* 9. SINGLE POST STYLES (post-template.html) */
+/* ==================================== */
+
+.section-padding-sm {
+    padding: var(--padding-md) 0;
+}
+
+.post-title-main {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-meta {
+    text-align: center;
+    margin-bottom: var(--padding-md);
+    color: var(--secondary-color);
+}
+
+.meta-item {
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.post-featured-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Đã chỉnh sửa Grid Layout và thêm grid-column để KHÓA vị trí */
+.post-content-layout {
+    display: grid;
+    grid-template-columns: 1fr 4fr; /* Mục lục (TOC) 1 phần, Nội dung 4 phần */
+    gap: var(--padding-md);
+}
+
+.post-toc {
+    grid-column: 1 / 2; /* Đảm bảo Mục lục luôn ở cột 1 */
+    position: sticky;
+    top: 100px; /* Cố định TOC khi cuộn */
+    height: fit-content;
+    padding: 1rem;
+    border-left: 3px solid var(--primary-color);
+    background-color: var(--light-bg);
+    border-radius: 4px;
+}
+
+.post-toc h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.post-toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-toc ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.3rem 0;
+    transition: color 0.2s;
+}
+
+.post-toc ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Thêm định vị cho Bài viết chính */
+.post-body {
+    grid-column: 2 / 3; /* Đảm bảo Nội dung luôn ở cột 2 */
+}
+
+
+/* Nội dung bài viết chính (Article body) */
+.post-body h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.post-body h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+}
+
+.post-body img.post-image-inline {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 6px;
+}
+
+.post-body code {
+    background-color: var(--light-bg);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+.post-body pre code {
+    display: block;
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+}
+
+.post-body blockquote {
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background-color: var(--light-bg);
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Author Bio Box */
+.author-bio-box {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* Thêm class này vào style.css */
+.is-hidden {
+    display: none !important;
+}
+
+/* ==================================== */
+/* 10. MEDIA QUERIES (Responsiveness) */
+/* ==================================== */
+
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+    /* HERO SECTION */
+    .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-image {
+        order: -1;
+        margin-bottom: var(--padding-md);
+    }
+    
+    .display-title {
+        font-size: 3rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* PROFILE/CV PAGE */
+    .about-hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-hero-image {
+        order: -1;
+        margin-bottom: var(--padding-md);
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-date {
+        position: static;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .timeline-item::after {
+        left: 6px;
+        top: 65px;
+    }
+    
+    .timeline-content {
+        padding-left: 30px;
+    }
+
+    /* CONTACT PAGE */
+    .contact-grid-layout {
+        grid-template-columns: 1fr; 
+    }
+    .contact-form-area {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: var(--padding-md);
+    }
+
+    /* SINGLE POST */
+    .post-content-layout {
+        grid-template-columns: 1fr; /* Quan trọng: Chuyển về 1 cột trên Mobile/Tablet */
+    }
+    
+    .post-toc {
+        grid-column: 1 / 2; /* Đảm bảo nó vẫn nằm ở vị trí mặc định */
+        position: static; /* Quan trọng: Bỏ cố định để nó không đè lên nội dung */
+        margin-bottom: var(--padding-md);
+    }
+    
+    .post-body {
+        grid-column: 1 / 2; /* Đảm bảo nội dung nằm dưới TOC */
+    }
+    
+    .post-title-main {
+        font-size: 2.5rem;
+    }
+
+
+    /* HEADER */
+    .header-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* BLOG LISTING */
+    .featured-post-card {
+        grid-template-columns: 1fr;
+    }
+    .post-image-area img {
+        height: 250px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 600px) {
+    .section-padding {
+        padding: var(--padding-md) 0;
+    }
+    
+    .display-title {
+        font-size: 2.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7: Lập Trình Bất Đồng Bộ - Chờ Đợi Không Còn Là Nỗi Lo | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Khám phá bí mật đằng sau Callback, Promises và Async/Await giúp web chạy mượt mà.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="../profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="../blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="../contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="../blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 7: Lập Trình Bất Đồng Bộ - Chờ Đợi Không Còn Là Nỗi Lo</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 16 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="../assets/img/blog7-featured.jpg" alt="Asynchronous Programming Concepts" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Nội dung bài viết</h4>
+                    <ul>
+                        <li><a href="#event-loop">1. Event Loop: Bí mật của "người đa năng"</a></li>
+                        <li><a href="#callback">2. Callback: Đừng để rơi vào "địa ngục"</a></li>
+                        <li><a href="#promises">3. Promises: Lời hứa của tương lai</a></li>
+                        <li><a href="#async-await">4. Async/Await: Viết code bất đồng bộ như đọc truyện</a></li>
+                        <li><a href="#ket-luan">5. Cảm nhận: Đẳng cấp mới của lập trình viên</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="event-loop">1. Event Loop: Bí mật của "người đa năng"</h2>
+                    <p>Trong bài học của Cisco, mình bị ám ảnh bởi câu hỏi: JavaScript là đơn luồng (Single-threaded), vậy làm sao nó có thể vừa tải dữ liệu, vừa cho người dùng nhấn nút? </p>
+                    <p>Câu trả lời nằm ở <strong>Event Loop</strong>. Hãy tưởng tượng bạn đi ăn ở một nhà hàng fast-food. Nhân viên nhận order (gọi API), đưa bạn một cái máy báo rung (Promise), sau đó họ phục vụ người tiếp theo. Khi món ăn xong, máy rung lên và bạn quay lại lấy. Đó chính là cách JS vận hành!</p>
+
+                    
+
+                    <h2 id="callback">2. Callback: Đừng để rơi vào "địa ngục"</h2>
+                    <p>Callback là cách cổ điển nhất. Bạn đưa một cái hàm này vào một cái hàm kia và dặn: "Xong việc thì gọi cái này nhé". </p>
+                    <p>Nhưng mình đã nếm mùi <strong>Callback Hell</strong> khi làm bài tập lồng 3-4 tác vụ liên tiếp. Code bắt đầu thụt vào như một cái mũi tên (Pyramid of Doom), cực kỳ khó đọc và dễ nhầm lẫn. Sinh viên chúng mình sợ nhất là lúc debug đống này!</p>
+
+                    <h2 id="promises">3. Promises: Lời hứa của tương lai</h2>
+                    <p>Khóa học Cisco Essentials 2 giải cứu mình bằng <strong>Promises</strong>. Thay vì lồng code, chúng ta sử dụng chuỗi <code>.then()</code> và <code>.catch()</code>. Nó giống như một lời cam kết: "Tôi hứa sẽ trả về kết quả, nếu thất bại tôi sẽ báo lỗi". Code trông đã sạch hơn rất nhiều.</p>
+
+                    
+
+                    <h2 id="async-await">4. Async/Await: Viết code bất đồng bộ như đọc truyện</h2>
+                    <p>Đây là "đỉnh cao" của lập trình hiện đại. Với <code>async</code> và <code>await</code>, mình có thể viết những tác vụ chờ đợi mà nhìn nó chẳng khác gì code tuần tự thông thường. </p>
+                    <pre>
+                        <code>
+async function hienThiThongTin() {
+    try {
+        const data = await fetchUserData(); // Chờ lấy dữ liệu xong
+        console.log(data); // Rồi mới hiện ra
+    } catch (err) {
+        console.error("Lỗi rồi bạn ơi!");
+    }
+}
+                        </code>
+                    </pre>
+                    <p>Góc nhìn sinh viên: <em>"Async/await giúp mình tập trung vào logic bài toán thay vì phải vặn óc suy nghĩ xem code nào chạy trước, code nào chạy sau."</em></p>
+
+                    <h2 id="ket-luan">5. Cảm nhận: Đẳng cấp mới của lập trình viên</h2>
+                    <p>Học xong bài 7, mình thấy mình như được "nâng cấp" lên một trình độ mới. Lập trình bất đồng bộ không chỉ là cú pháp, nó là tư duy về hiệu suất. </p>
+                    <p>Hẹn gặp các bạn ở Bài 8, bài viết thực chiến nhất: <strong>DOM Manipulation</strong>. Chúng ta sẽ dùng tất cả những gì đã học từ bài 1 tới giờ để làm cho trang web "biến hình" theo ý muốn!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #3f51b5;">
+                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
+                    <p>Lần đầu tiên làm bài Lab về Async, mình đã quên dùng <code>await</code> và nhận về kết quả là một đống <code>Promise { &lt;pending&gt; }</code>. Bạn đã từng gặp "lời hứa treo" như mình chưa? Để lại bình luận nhé!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog6.html" style="text-decoration: none; color: #666;">← Bài 6: Xử lý lỗi</a>
+                    <a href="Blog8.html" style="background: #3f51b5; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 8 - DOM Manipulation &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = '../index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6: Xử Lý Lỗi - Đừng Để Code Của Bạn "Chết" Trong Im Lặng | Blog Thành Đạt</title>
+    <meta name="description" content="Nhật ký học JavaScript Essentials 2: Cách sử dụng try-catch, throw và xử lý ngoại lệ để xây dựng ứng dụng bền bỉ.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">THÀNH ĐẠT BLOG</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="../profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="../blog.html" class="nav-link active">Blog</a></li> 
+                    <li><a href="../contact.html" class="cta-nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-header" class="section-padding-sm bg-light">
+            <div class="container post-header-content">
+                <p class="pre-title"><a href="../blog.html">← Series: Nhật ký JavaScript Essentials</a></p>
+                <h1 class="post-title-main">Bài 6: Xử Lý Lỗi - Đừng Để Code Của Bạn "Chết" Trong Im Lặng</h1>
+                
+                <div class="post-meta">
+                    <span class="meta-item">📅 15 Tháng 12, 2025</span>
+                    <span class="meta-item">✍️ Tác giả: Thành Đạt</span>
+                    <span class="meta-item">🎓 Level: JavaScript Essentials 2</span>
+                </div>
+            </div>
+            
+            <div class="post-featured-image container" style="margin-top: 2rem;">
+                <img src="../assets/img/blog6-featured.jpg" alt="Xử lý lỗi trong JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <section id="post-content" class="section-padding">
+            <div class="container post-content-layout">
+                
+                <aside class="post-toc">
+                    <h4>Mục lục bài viết</h4>
+                    <ul>
+                        <li><a href="#loi-la-gi">1. Lỗi không đáng sợ, đáng sợ là không biết lỗi ở đâu</a></li>
+                        <li><a href="#try-catch">2. Try-Catch: Tấm lưới bảo hiểm của lập trình viên</a></li>
+                        <li><a href="#throw">3. Chủ động "ném" lỗi với Throw</a></li>
+                        <li><a href="#finally">4. Finally: Dọn dẹp chiến trường</a></li>
+                        <li><a href="#ket-luan">5. Cảm nhận: Code "sạch" là code biết tự bảo vệ</a></li>
+                    </ul>
+                </aside>
+
+                <article class="post-body">
+                    
+                    <h2 id="loi-la-gi">1. Lỗi không đáng sợ, đáng sợ là không biết lỗi ở đâu</h2>
+                    <p>Trong quá trình làm bài Lab của Cisco, có những lúc code của mình không chạy, nhưng trình duyệt cũng chẳng hiện gì cả. Đó là cảm giác tồi tệ nhất của một sinh viên IT: <strong>Lỗi im lặng.</strong></p>
+                    <p>Khóa học Essentials 2 dạy mình rằng lỗi (Exception) là một phần tất yếu. Thay vì trốn tránh, chúng ta phải học cách dự đoán chúng. Một người dùng có thể nhập chữ vào ô nhập số, hoặc mạng có thể bị ngắt bất ngờ. Code tốt là code phải tính đến những trường hợp "xấu xí" đó.</p>
+
+                    <h2 id="try-catch">2. Try-Catch: Tấm lưới bảo hiểm của lập trình viên</h2>
+                    <p>Cấu trúc <code>try...catch</code> giống như việc bạn đi thăng bằng trên dây nhưng có một tấm lưới bảo hiểm bên dưới. Bạn đặt những đoạn code "nguy hiểm" vào trong <code>try</code>, và nếu có chuyện gì xảy ra, chương trình sẽ lập tức nhảy vào <code>catch</code> thay vì sụp đổ hoàn toàn.</p>
+
+                    
+
+                    <pre>
+                        <code>
+try {
+    let result = complexCalculation();
+    console.log(result);
+} catch (error) {
+    console.error("Có gì đó sai sai: " + error.message);
+}
+                        </code>
+                    </pre>
+
+                    <h2 id="throw">3. Chủ động "ném" lỗi với Throw</h2>
+                    <p>Có một kỹ thuật rất hay trong giáo trình Cisco là chủ động tạo ra lỗi bằng từ khóa <code>throw</code>. </p>
+                    <p>Góc nhìn sinh viên: Lúc đầu mình nghĩ "Tại sao lại tự làm khó mình bằng cách tạo ra lỗi?". Nhưng sau đó mình hiểu ra, việc <code>throw</code> lỗi sớm giúp mình chặn đứng những dữ liệu sai trái ngay từ đầu, tránh để nó đi sâu vào hệ thống và gây ra những hậu quả nghiêm trọng hơn.</p>
+
+                    <h2 id="finally">4. Finally: Dọn dẹp chiến trường</h2>
+                    <p>Dù code có chạy thành công hay gặp lỗi, khối <code>finally</code> vẫn sẽ luôn được thực thi. Đây là nơi lý tưởng để mình thực hiện các thao tác "dọn dẹp" như đóng kết nối Database hoặc tắt biểu tượng Loading trên giao diện.</p>
+                    <p>Nó giống như việc bạn nấu ăn: dù món ăn có ngon hay bị cháy, bạn vẫn phải rửa bát đĩa và dọn dẹp nhà bếp vậy!</p>
+
+                    <h2 id="ket-luan">5. Cảm nhận: Code "sạch" là code biết tự bảo vệ</h2>
+                    <p>Sau bài học này, mình bớt sợ những dòng chữ màu đỏ trên Console hơn. Mình nhận ra Debugging không phải là đi tìm sai sót của bản thân, mà là quá trình làm cho ứng dụng trở nên bền bỉ (Robust) hơn.</p>
+                    <p>Bài học tiếp theo sẽ là "quái vật" thực sự của JavaScript: <strong>Lập trình bất đồng bộ (Asynchronous)</strong>. Các bạn hãy chuẩn bị tinh thần nhé, chúng ta sắp chạm tay vào những kiến thức nâng cao nhất rồi!</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="post-footer" class="section-padding bg-light">
+            <div class="container">
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #f44336;">
+                    <h4>👨‍🎓 Nhật ký của Đạt</h4>
+                    <p>Bạn thường làm gì khi gặp lỗi? Cáu gắt hay bình tĩnh đọc log? Hãy nhớ rằng mỗi con Bug là một cơ hội để chúng ta hiểu sâu hơn về ngôn ngữ đấy!</p>
+                </div>
+                
+                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                    <a href="Blog5.html" style="text-decoration: none; color: #666;">← Bài 5: Tư duy OOP</a>
+                    <a href="Blog7.html" style="background: #f44336; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                        Tiếp theo: Bài 7 - Bất đồng bộ &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" style="padding: 4rem 0; background: #1a1a1a; color: white; margin-top: 5rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Thành Đạt Blog - Học để xây dựng tương lai</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/nltd3304" style="color: #aaa; margin: 0 10px;">GitHub</a>
+                <a href="https://www.linkedin.com/in/nltd3304/" style="color: #aaa; margin: 0 10px;">LinkedIn</a>
+                <a href="https://www.facebook.com/nltd3304/" style="color: #aaa; margin: 0 10px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Chọn phần tử có class là 'logo'
+    const logoElement = document.querySelector('.logo');
+
+    // Thêm sự kiện click
+    logoElement.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định nếu có
+        window.location.href = '../index.html'; // Điều hướng về trang chủ
+    });
+
+    // Thêm style con trỏ chuột để người dùng biết có thể click được
+    logoElement.style.cursor = 'pointer';
+</script>
+</body>
+</html>
