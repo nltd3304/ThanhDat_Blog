@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector(".search-input");
     const searchForm = document.querySelector(".search-form");
 
     const featuredPost = document.querySelector(".featured-post-card");
     const postCards = document.querySelectorAll(".regular-posts-grid .blog-card");
 
-    // --- Tìm kiếm realtime ---
+    // --- TÃ¬m kiáº¿m realtime ---
     searchInput.addEventListener("input", () => {
         const keyword = searchInput.value.trim().toLowerCase();
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Ẩn bài viết nổi bật khi đang tìm
+        // áº¨n bÃ i viáº¿t ná»•i báº­t khi Ä‘ang tÃ¬m
         featuredPost.style.display = "none";
 
         postCards.forEach(card => {
@@ -29,14 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- Submit form vẫn hoạt động bình thường ---
+    // --- Submit form váº«n hoáº¡t Ä‘á»™ng bÃ¬nh thÆ°á»ng ---
     searchForm.addEventListener("submit", e => e.preventDefault());
 
-    // --- Hàm reset UI về nguyên bản ---
+    // --- HÃ m reset UI vá» nguyÃªn báº£n ---
     function resetView() {
-        featuredPost.style.display = ""; // khôi phục đúng CSS gốc
+        featuredPost.style.display = ""; // khÃ´i phá»¥c Ä‘Ãºng CSS gá»‘c
         postCards.forEach(card => {
             card.style.display = "";
         });
     }
 });
+

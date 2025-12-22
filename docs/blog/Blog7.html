@@ -3,8 +3,8 @@
 <head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BÃ i 7: Láº­p TrÃ¬nh Báº¥t Äá»“ng Bá»™ - Chá» Äá»£i KhÃ´ng CÃ²n LÃ  Ná»—i Lo | Blog ThÃ nh Äáº¡t</title>
-    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 2: KhÃ¡m phÃ¡ bÃ­ máº­t Ä‘áº±ng sau Callback, Promises vÃ  Async/Await giÃºp web cháº¡y mÆ°á»£t mÃ .">
+    <title>BÃ i 9: Tá»•ng Káº¿t Lá»™ TrÃ¬nh - Tá»« Essentials Äáº¿n Thá»±c Chiáº¿n | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ káº¿t thÃºc chuá»—i bÃ i há»c JavaScript Essentials cá»§a Cisco. Chia sáº» kinh nghiá»‡m thi chá»©ng chá»‰ vÃ  Ä‘á»‹nh hÆ°á»›ng há»c táº­p tiáº¿p theo cho sinh viÃªn IT.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -29,17 +29,17 @@
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
                 <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
-                <h1 class="post-title-main">BÃ i 7: Láº­p TrÃ¬nh Báº¥t Äá»“ng Bá»™ - Chá» Äá»£i KhÃ´ng CÃ²n LÃ  Ná»—i Lo</h1>
+                <h1 class="post-title-main">BÃ i 9: Tá»•ng Káº¿t Lá»™ TrÃ¬nh - Tá»« Essentials Äáº¿n Thá»±c Chiáº¿n</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">ðŸ“… 16 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">ðŸ“… 18 ThÃ¡ng 12, 2025</span>
                     <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
-                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 2</span>
+                    <span class="meta-item">ðŸ† ThÃ nh tá»±u: JSE Certification</span>
                 </div>
             </div>
             
             <div class="post-featured-image container" style="margin-top: 2rem;">
-                <img src="assets/img/blog7-featured.jpg" alt="Asynchronous Programming Concepts" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <img src="assets/img/blog9-featured.jpg" alt="HoÃ n thÃ nh khÃ³a há»c JavaScript Essentials Cisco" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
         </section>
 
@@ -47,52 +47,45 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
+                    <h4>Ná»™i dung tá»•ng káº¿t</h4>
                     <ul>
-                        <li><a href="#event-loop">1. Event Loop: BÃ­ máº­t cá»§a "ngÆ°á»i Ä‘a nÄƒng"</a></li>
-                        <li><a href="#callback">2. Callback: Äá»«ng Ä‘á»ƒ rÆ¡i vÃ o "Ä‘á»‹a ngá»¥c"</a></li>
-                        <li><a href="#promises">3. Promises: Lá»i há»©a cá»§a tÆ°Æ¡ng lai</a></li>
-                        <li><a href="#async-await">4. Async/Await: Viáº¿t code báº¥t Ä‘á»“ng bá»™ nhÆ° Ä‘á»c truyá»‡n</a></li>
-                        <li><a href="#ket-luan">5. Cáº£m nháº­n: Äáº³ng cáº¥p má»›i cá»§a láº­p trÃ¬nh viÃªn</a></li>
+                        <li><a href="#nhin-lai">1. NhÃ¬n láº¡i hÃ nh trÃ¬nh 1 thÃ¡ng vá»«a qua</a></li>
+                        <li><a href="#chung-chi">2. Kinh nghiá»‡m "vÆ°á»£t vÅ© mÃ´n" ká»³ thi Cisco</a></li>
+                        <li><a href="#tu-duy">3. Sá»± thay Ä‘á»•i tÆ° duy: Tá»« Coder sang Developer</a></li>
+                        <li><a href="#next-steps">4. BÆ°á»›c tiáº¿p theo: NÃªn há»c gÃ¬ tiáº¿p theo?</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="event-loop">1. Event Loop: BÃ­ máº­t cá»§a "ngÆ°á»i Ä‘a nÄƒng"</h2>
-                    <p>Trong bÃ i há»c cá»§a Cisco, mÃ¬nh bá»‹ Ã¡m áº£nh bá»Ÿi cÃ¢u há»i: JavaScript lÃ  Ä‘Æ¡n luá»“ng (Single-threaded), váº­y lÃ m sao nÃ³ cÃ³ thá»ƒ vá»«a táº£i dá»¯ liá»‡u, vá»«a cho ngÆ°á»i dÃ¹ng nháº¥n nÃºt? </p>
-                    <p>CÃ¢u tráº£ lá»i náº±m á»Ÿ <strong>Event Loop</strong>. HÃ£y tÆ°á»Ÿng tÆ°á»£ng báº¡n Ä‘i Äƒn á»Ÿ má»™t nhÃ  hÃ ng fast-food. NhÃ¢n viÃªn nháº­n order (gá»i API), Ä‘Æ°a báº¡n má»™t cÃ¡i mÃ¡y bÃ¡o rung (Promise), sau Ä‘Ã³ há» phá»¥c vá»¥ ngÆ°á»i tiáº¿p theo. Khi mÃ³n Äƒn xong, mÃ¡y rung lÃªn vÃ  báº¡n quay láº¡i láº¥y. ÄÃ³ chÃ­nh lÃ  cÃ¡ch JS váº­n hÃ nh!</p>
+                    <h2 id="nhin-lai">1. NhÃ¬n láº¡i hÃ nh trÃ¬nh 2 thÃ¡ng vá»«a qua</h2>
+                    <p>ChÃ o cÃ¡c báº¡n, váº­y lÃ  series 9 bÃ i blog cá»§a mÃ¬nh vá» JavaScript Essentials Ä‘Ã£ Ä‘i tá»›i há»“i káº¿t. Tá»« nhá»¯ng bá»¡ ngá»¡ vá» <code>let</code>, <code>const</code> á»Ÿ BÃ i 1, cho Ä‘áº¿n viá»‡c xá»­ lÃ½ báº¥t Ä‘á»“ng bá»™ phá»©c táº¡p á»Ÿ BÃ i 7, mÃ¬nh nháº­n ra ráº±ng: <strong>Há»c bÃ i báº£n lÃ  con Ä‘Æ°á»ng ngáº¯n nháº¥t Ä‘á»ƒ Ä‘i xa.</strong></p>
+                    <p>KhÃ³a há»c cá»§a Cisco khÃ´ng chá»‰ dáº¡y mÃ¬nh cÃº phÃ¡p, mÃ  dáº¡y mÃ¬nh cÃ¡ch mÃ¡y tÃ­nh váº­n hÃ nh, cÃ¡ch quáº£n lÃ½ bá»™ nhá»› vÃ  cÃ¡ch tÆ° duy logic má»™t cÃ¡ch há»‡ thá»‘ng.</p>
+
+                    <h2 id="chung-chi">2. Kinh nghiá»‡m "vÆ°á»£t vÅ© mÃ´n" ká»³ thi Cisco</h2>
+                    <p>Äá»ƒ nháº­n Ä‘Æ°á»£c Badge xanh cá»§a Cisco, mÃ¬nh Ä‘Ã£ pháº£i tráº£i qua ká»³ thi cuá»‘i khÃ³a khÃ¡ cÄƒng tháº³ng. Lá»i khuyÃªn cá»§a mÃ¬nh dÃ nh cho cÃ¡c báº¡n sinh viÃªn lÃ :</p>
+                    <ul>
+                        <li><strong>Äá»«ng bá» qua bÃ i Lab:</strong> Nhá»¯ng cÃ¢u há»i trong Ä‘á» thi bÃ¡m ráº¥t sÃ¡t vÃ o viá»‡c thá»±c hÃ nh.</li>
+                        <li><strong>Hiá»ƒu rÃµ Scope vÃ  Closure:</strong> ÄÃ¢y lÃ  nhá»¯ng pháº§n cá»±c ká»³ dá»… máº¥t Ä‘iá»ƒm náº¿u báº¡n chá»‰ há»c váº¹t.</li>
+                        <li><strong>Ã”n ká»¹ OOP:</strong> Pháº§n Essentials 2 táº­p trung ráº¥t nhiá»u vÃ o Class vÃ  káº¿ thá»«a.</li>
+                    </ul>
 
                     
 
-                    <h2 id="callback">2. Callback: Äá»«ng Ä‘á»ƒ rÆ¡i vÃ o "Ä‘á»‹a ngá»¥c"</h2>
-                    <p>Callback lÃ  cÃ¡ch cá»• Ä‘iá»ƒn nháº¥t. Báº¡n Ä‘Æ°a má»™t cÃ¡i hÃ m nÃ y vÃ o má»™t cÃ¡i hÃ m kia vÃ  dáº·n: "Xong viá»‡c thÃ¬ gá»i cÃ¡i nÃ y nhÃ©". </p>
-                    <p>NhÆ°ng mÃ¬nh Ä‘Ã£ náº¿m mÃ¹i <strong>Callback Hell</strong> khi lÃ m bÃ i táº­p lá»“ng 3-4 tÃ¡c vá»¥ liÃªn tiáº¿p. Code báº¯t Ä‘áº§u thá»¥t vÃ o nhÆ° má»™t cÃ¡i mÅ©i tÃªn (Pyramid of Doom), cá»±c ká»³ khÃ³ Ä‘á»c vÃ  dá»… nháº§m láº«n. Sinh viÃªn chÃºng mÃ¬nh sá»£ nháº¥t lÃ  lÃºc debug Ä‘á»‘ng nÃ y!</p>
+                    <h2 id="tu-duy">3. Sá»± thay Ä‘á»•i tÆ° duy: Tá»« Coder sang Developer</h2>
+                    <p>TrÆ°á»›c Ä‘Ã¢y mÃ¬nh chá»‰ lÃ  má»™t ngÆ°á»i "biáº¿t code" â€“ tá»©c lÃ  ai báº£o gÃ¬ viáº¿t náº¥y. Sau khÃ³a há»c nÃ y, mÃ¬nh cáº£m tháº¥y mÃ¬nh Ä‘ang trá»Ÿ thÃ nh má»™t "nhÃ  phÃ¡t triá»ƒn" (Developer). MÃ¬nh báº¯t Ä‘áº§u biáº¿t lo láº¯ng vá» hiá»‡u nÄƒng, vá» viá»‡c xá»­ lÃ½ lá»—i sao cho á»©ng dá»¥ng khÃ´ng cháº¿t, vÃ  vá» viá»‡c viáº¿t code sao cho ngÆ°á»i sau Ä‘á»c váº«n hiá»ƒu Ä‘Æ°á»£c.</p>
 
-                    <h2 id="promises">3. Promises: Lá»i há»©a cá»§a tÆ°Æ¡ng lai</h2>
-                    <p>KhÃ³a há»c Cisco Essentials 2 giáº£i cá»©u mÃ¬nh báº±ng <strong>Promises</strong>. Thay vÃ¬ lá»“ng code, chÃºng ta sá»­ dá»¥ng chuá»—i <code>.then()</code> vÃ  <code>.catch()</code>. NÃ³ giá»‘ng nhÆ° má»™t lá»i cam káº¿t: "TÃ´i há»©a sáº½ tráº£ vá» káº¿t quáº£, náº¿u tháº¥t báº¡i tÃ´i sáº½ bÃ¡o lá»—i". Code trÃ´ng Ä‘Ã£ sáº¡ch hÆ¡n ráº¥t nhiá»u.</p>
+                    <h2 id="next-steps">4. BÆ°á»›c tiáº¿p theo: NÃªn há»c gÃ¬ tiáº¿p theo?</h2>
+                    <p>Chá»©ng chá»‰ JSE (JavaScript Essentials) má»›i chá»‰ lÃ  Ä‘iá»ƒm báº¯t Ä‘áº§u. Äá»ƒ thá»±c sá»± Ä‘i lÃ m Ä‘Æ°á»£c, chÃºng ta cáº§n chá»n cho mÃ¬nh má»™t hÆ°á»›ng Ä‘i chuyÃªn sÃ¢u:</p>
+                    <ul>
+                        <li><strong>Front-end:</strong> Tiáº¿p tá»¥c vá»›i <strong>React</strong> hoáº·c <strong>Vue.js</strong>. Báº¡n Ä‘Ã£ cÃ³ ná»n táº£ng DOM vá»¯ng cháº¯c á»Ÿ BÃ i 8 rá»“i, viá»‡c há»c Framework sáº½ nhanh hÆ¡n ráº¥t nhiá»u.</li>
+                        <li><strong>Back-end:</strong> Thá»­ sá»©c vá»›i <strong>Node.js</strong> vÃ  <strong>Express</strong>. ToÃ n bá»™ kiáº¿n thá»©c vá» Async/Await á»Ÿ BÃ i 7 sáº½ lÃ  "vÅ© khÃ­" cá»±c máº¡nh cá»§a báº¡n á»Ÿ Ä‘Ã¢y.</li>
+                        <li><strong>Mobile:</strong> KhÃ¡m phÃ¡ <strong>React Native</strong> Ä‘á»ƒ xÃ¢y dá»±ng á»©ng dá»¥ng trÃªn cáº£ iOS vÃ  Android.</li>
+                    </ul>
 
                     
 
-                    <h2 id="async-await">4. Async/Await: Viáº¿t code báº¥t Ä‘á»“ng bá»™ nhÆ° Ä‘á»c truyá»‡n</h2>
-                    <p>ÄÃ¢y lÃ  "Ä‘á»‰nh cao" cá»§a láº­p trÃ¬nh hiá»‡n Ä‘áº¡i. Vá»›i <code>async</code> vÃ  <code>await</code>, mÃ¬nh cÃ³ thá»ƒ viáº¿t nhá»¯ng tÃ¡c vá»¥ chá» Ä‘á»£i mÃ  nhÃ¬n nÃ³ cháº³ng khÃ¡c gÃ¬ code tuáº§n tá»± thÃ´ng thÆ°á»ng. </p>
-                    <pre>
-                        <code>
-async function hienThiThongTin() {
-    try {
-        const data = await fetchUserData(); // Chá» láº¥y dá»¯ liá»‡u xong
-        console.log(data); // Rá»“i má»›i hiá»‡n ra
-    } catch (err) {
-        console.error("Lá»—i rá»“i báº¡n Æ¡i!");
-    }
-}
-                        </code>
-                    </pre>
-                    <p>GÃ³c nhÃ¬n sinh viÃªn: <em>"Async/await giÃºp mÃ¬nh táº­p trung vÃ o logic bÃ i toÃ¡n thay vÃ¬ pháº£i váº·n Ã³c suy nghÄ© xem code nÃ o cháº¡y trÆ°á»›c, code nÃ o cháº¡y sau."</em></p>
-
-                    <h2 id="ket-luan">5. Cáº£m nháº­n: Äáº³ng cáº¥p má»›i cá»§a láº­p trÃ¬nh viÃªn</h2>
-                    <p>Há»c xong bÃ i 7, mÃ¬nh tháº¥y mÃ¬nh nhÆ° Ä‘Æ°á»£c "nÃ¢ng cáº¥p" lÃªn má»™t trÃ¬nh Ä‘á»™ má»›i. Láº­p trÃ¬nh báº¥t Ä‘á»“ng bá»™ khÃ´ng chá»‰ lÃ  cÃº phÃ¡p, nÃ³ lÃ  tÆ° duy vá» hiá»‡u suáº¥t. </p>
-                    <p>Háº¹n gáº·p cÃ¡c báº¡n á»Ÿ BÃ i 8, bÃ i viáº¿t thá»±c chiáº¿n nháº¥t: <strong>DOM Manipulation</strong>. ChÃºng ta sáº½ dÃ¹ng táº¥t cáº£ nhá»¯ng gÃ¬ Ä‘Ã£ há»c tá»« bÃ i 1 tá»›i giá» Ä‘á»ƒ lÃ m cho trang web "biáº¿n hÃ¬nh" theo Ã½ muá»‘n!</p>
+                    <p>Cáº£m Æ¡n cÃ¡c báº¡n Ä‘Ã£ luÃ´n theo dÃµi vÃ  á»§ng há»™ series nÃ y cá»§a mÃ¬nh. Äá»«ng bao giá» ngá»«ng há»c há»i, vÃ¬ tháº¿ giá»›i cÃ´ng nghá»‡ luÃ´n váº­n Ä‘á»™ng má»—i ngÃ y!</p>
 
                 </article>
             </div>
@@ -100,15 +93,14 @@ async function hienThiThongTin() {
 
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
-                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #3f51b5;">
-                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
-                    <p>Láº§n Ä‘áº§u tiÃªn lÃ m bÃ i Lab vá» Async, mÃ¬nh Ä‘Ã£ quÃªn dÃ¹ng <code>await</code> vÃ  nháº­n vá» káº¿t quáº£ lÃ  má»™t Ä‘á»‘ng <code>Promise { &lt;pending&gt; }</code>. Báº¡n Ä‘Ã£ tá»«ng gáº·p "lá»i há»©a treo" nhÆ° mÃ¬nh chÆ°a? Äá»ƒ láº¡i bÃ¬nh luáº­n nhÃ©!</p>
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-top: 5px solid #ffc107;">
+                    <h4>ðŸŽ¯ Lá»i nháº¯n cuá»‘i cÃ¹ng</h4>
+                    <p>Series nÃ y khÃ©p láº¡i nhÆ°ng hÃ nh trÃ¬nh cá»§a chÃºng ta thÃ¬ khÃ´ng. Náº¿u báº¡n cÃ³ báº¥t ká»³ cÃ¢u há»i nÃ o vá» lá»™ trÃ¬nh há»c hay ká»³ thi cá»§a Cisco, hÃ£y káº¿t ná»‘i vá»›i mÃ¬nh qua LinkedIn nhÃ©. ChÃºc cÃ¡c báº¡n sá»›m trá»Ÿ thÃ nh nhá»¯ng Developer thá»±c thá»¥!</p>
                 </div>
                 
-                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog6.html" style="text-decoration: none; color: #666;">â† BÃ i 6: Xá»­ lÃ½ lá»—i</a>
-                    <a href="Blog8.html" style="background: #3f51b5; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiáº¿p theo: BÃ i 8 - DOM Manipulation &rarr;
+                <div class="next-post-nav" style="margin-top: 3rem; text-align: center;">
+                    <a href="index.html" class="btn btn-primary" style="padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700;">
+                        Quay láº¡i Trang Chá»§ & KhÃ¡m phÃ¡ Dá»± Ã¡n má»›i
                     </a>
                 </div>
             </div>
@@ -125,6 +117,7 @@ async function hienThiThongTin() {
             </div>
         </div>
     </footer>
+    
     <script>
     // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');

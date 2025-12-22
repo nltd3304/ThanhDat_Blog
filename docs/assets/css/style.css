@@ -1,4 +1,4 @@
-/* ==================================== */
+﻿/* ==================================== */
 /* 0. GLOBAL RESET & TYPOGRAPHY */
 /* ==================================== */
 * {
@@ -8,7 +8,7 @@
 }
 
 :root {
-    /* Màu sắc - Tông màu trung tính, độ tương phản cao */
+    /* MÃ u sáº¯c - TÃ´ng mÃ u trung tÃ­nh, Ä‘á»™ tÆ°Æ¡ng pháº£n cao */
     --primary-color: #0070f3; 
     --secondary-color: #6c757d; 
     --dark-color: #171717; 
@@ -59,7 +59,7 @@ body {
     text-align: center;
 }
 
-/* Tiêu đề cấp bậc */
+/* TiÃªu Ä‘á» cáº¥p báº­c */
 .pre-title {
     font-size: 0.9rem;
     letter-spacing: 0.1em;
@@ -316,7 +316,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Blog Card Tối Giản (Dùng cho index và blog listing) */
+/* Blog Card Tá»‘i Giáº£n (DÃ¹ng cho index vÃ  blog listing) */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -412,7 +412,7 @@ body {
 /* 6. BLOG PAGE SPECIFIC STYLES (blog.html) */
 /* ==================================== */
 
-/* Thanh tìm kiếm */
+/* Thanh tÃ¬m kiáº¿m */
 .search-form {
     display: flex;
     justify-content: center;
@@ -437,7 +437,7 @@ body {
     border-color: var(--primary-color);
 }
 
-/* Bài viết nổi bật (Featured Post Card) */
+/* BÃ i viáº¿t ná»•i báº­t (Featured Post Card) */
 .blog-grid-full {
     margin-top: var(--padding-md);
 }
@@ -486,14 +486,14 @@ body {
     font-size: 0.9rem;
 }
 
-/* Lưới các bài viết thường trên trang Blog Listing */
+/* LÆ°á»›i cÃ¡c bÃ i viáº¿t thÆ°á»ng trÃªn trang Blog Listing */
 .regular-posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--padding-sm);
 }
 
-/* Phân trang */
+/* PhÃ¢n trang */
 .pagination {
     margin-top: var(--padding-md);
     padding-top: var(--padding-sm);
@@ -519,7 +519,7 @@ body {
 /* 7. PROFILE/CV PAGE SPECIFIC STYLES (profile.html) */
 /* ==================================== */
 
-/* Layout cho phần Profile Hero */
+/* Layout cho pháº§n Profile Hero */
 .about-hero-layout {
     display: grid;
     grid-template-columns: 1fr 2fr; 
@@ -537,7 +537,7 @@ body {
     margin: 0 auto;
 }
 
-/* Kỹ năng */
+/* Ká»¹ nÄƒng */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -564,7 +564,7 @@ body {
     color: var(--text-color);
 }
 
-/* Timeline Kinh nghiệm/Học vấn */
+/* Timeline Kinh nghiá»‡m/Há»c váº¥n */
 .timeline {
     max-width: 900px;
     margin: 3rem auto 0 auto;
@@ -572,7 +572,7 @@ body {
     padding-left: 0px; 
 }
 
-/* Đường kẻ dọc (Timeline line) */
+/* ÄÆ°á»ng káº» dá»c (Timeline line) */
 .timeline::before {
     content: '';
     position: absolute;
@@ -604,7 +604,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Điểm tròn trên timeline */
+/* Äiá»ƒm trÃ²n trÃªn timeline */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -645,7 +645,7 @@ body {
 
 .contact-grid-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Form chiếm 2/3, Info chiếm 1/3 */
+    grid-template-columns: 2fr 1fr; /* Form chiáº¿m 2/3, Info chiáº¿m 1/3 */
     gap: var(--padding-lg);
 }
 
@@ -763,17 +763,17 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Đã chỉnh sửa Grid Layout và thêm grid-column để KHÓA vị trí */
+/* ÄÃ£ chá»‰nh sá»­a Grid Layout vÃ  thÃªm grid-column Ä‘á»ƒ KHÃ“A vá»‹ trÃ­ */
 .post-content-layout {
     display: grid;
-    grid-template-columns: 1fr 4fr; /* Mục lục (TOC) 1 phần, Nội dung 4 phần */
+    grid-template-columns: 1fr 4fr; /* Má»¥c lá»¥c (TOC) 1 pháº§n, Ná»™i dung 4 pháº§n */
     gap: var(--padding-md);
 }
 
 .post-toc {
-    grid-column: 1 / 2; /* Đảm bảo Mục lục luôn ở cột 1 */
+    grid-column: 1 / 2; /* Äáº£m báº£o Má»¥c lá»¥c luÃ´n á»Ÿ cá»™t 1 */
     position: sticky;
-    top: 100px; /* Cố định TOC khi cuộn */
+    top: 100px; /* Cá»‘ Ä‘á»‹nh TOC khi cuá»™n */
     height: fit-content;
     padding: 1rem;
     border-left: 3px solid var(--primary-color);
@@ -804,13 +804,13 @@ body {
     color: var(--primary-color);
 }
 
-/* Thêm định vị cho Bài viết chính */
+/* ThÃªm Ä‘á»‹nh vá»‹ cho BÃ i viáº¿t chÃ­nh */
 .post-body {
-    grid-column: 2 / 3; /* Đảm bảo Nội dung luôn ở cột 2 */
+    grid-column: 2 / 3; /* Äáº£m báº£o Ná»™i dung luÃ´n á»Ÿ cá»™t 2 */
 }
 
 
-/* Nội dung bài viết chính (Article body) */
+/* Ná»™i dung bÃ i viáº¿t chÃ­nh (Article body) */
 .post-body h2 {
     font-size: 2rem;
     margin-top: 2.5rem;
@@ -869,7 +869,7 @@ body {
     max-width: 700px;
     margin: 0 auto;
 }
-/* Thêm class này vào style.css */
+/* ThÃªm class nÃ y vÃ o style.css */
 .is-hidden {
     display: none !important;
 }
@@ -945,17 +945,17 @@ body {
 
     /* SINGLE POST */
     .post-content-layout {
-        grid-template-columns: 1fr; /* Quan trọng: Chuyển về 1 cột trên Mobile/Tablet */
+        grid-template-columns: 1fr; /* Quan trá»ng: Chuyá»ƒn vá» 1 cá»™t trÃªn Mobile/Tablet */
     }
     
     .post-toc {
-        grid-column: 1 / 2; /* Đảm bảo nó vẫn nằm ở vị trí mặc định */
-        position: static; /* Quan trọng: Bỏ cố định để nó không đè lên nội dung */
+        grid-column: 1 / 2; /* Äáº£m báº£o nÃ³ váº«n náº±m á»Ÿ vá»‹ trÃ­ máº·c Ä‘á»‹nh */
+        position: static; /* Quan trá»ng: Bá» cá»‘ Ä‘á»‹nh Ä‘á»ƒ nÃ³ khÃ´ng Ä‘Ã¨ lÃªn ná»™i dung */
         margin-bottom: var(--padding-md);
     }
     
     .post-body {
-        grid-column: 1 / 2; /* Đảm bảo nội dung nằm dưới TOC */
+        grid-column: 1 / 2; /* Äáº£m báº£o ná»™i dung náº±m dÆ°á»›i TOC */
     }
     
     .post-title-main {
@@ -999,3 +999,4 @@ body {
         gap: 1rem;
     }
 }
+

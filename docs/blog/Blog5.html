@@ -3,8 +3,8 @@
 <head>`r`n    <base href="/nltd3304/ThanhDat_Blog/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BÃ i 5: TÆ° Duy OOP - Khi Code KhÃ´ng Chá»‰ LÃ  Nhá»¯ng DÃ²ng Lá»‡nh | Blog ThÃ nh Äáº¡t</title>
-    <meta name="description" content="Nháº­t kÃ½ há»c JavaScript Essentials 2: KhÃ¡m phÃ¡ tháº¿ giá»›i láº­p trÃ¬nh hÆ°á»›ng Ä‘á»‘i tÆ°á»£ng (OOP) qua Class, Object vÃ  cÃ¡c tÃ­nh cháº¥t cá»‘t lÃµi.">
+    <title>BÃ i 9: Tá»•ng Káº¿t Lá»™ TrÃ¬nh - Tá»« Essentials Äáº¿n Thá»±c Chiáº¿n | Blog ThÃ nh Äáº¡t</title>
+    <meta name="description" content="Nháº­t kÃ½ káº¿t thÃºc chuá»—i bÃ i há»c JavaScript Essentials cá»§a Cisco. Chia sáº» kinh nghiá»‡m thi chá»©ng chá»‰ vÃ  Ä‘á»‹nh hÆ°á»›ng há»c táº­p tiáº¿p theo cho sinh viÃªn IT.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -29,17 +29,17 @@
         <section id="post-header" class="section-padding-sm bg-light">
             <div class="container post-header-content">
                 <p class="pre-title"><a href="blog.html">â† Series: Nháº­t kÃ½ JavaScript Essentials</a></p>
-                <h1 class="post-title-main">BÃ i 5: TÆ° Duy OOP - Khi Code KhÃ´ng Chá»‰ LÃ  Nhá»¯ng DÃ²ng Lá»‡nh</h1>
+                <h1 class="post-title-main">BÃ i 9: Tá»•ng Káº¿t Lá»™ TrÃ¬nh - Tá»« Essentials Äáº¿n Thá»±c Chiáº¿n</h1>
                 
                 <div class="post-meta">
-                    <span class="meta-item">ðŸ“… 14 ThÃ¡ng 12, 2025</span>
+                    <span class="meta-item">ðŸ“… 18 ThÃ¡ng 12, 2025</span>
                     <span class="meta-item">âœï¸ TÃ¡c giáº£: ThÃ nh Äáº¡t</span>
-                    <span class="meta-item">ðŸŽ“ Level: JavaScript Essentials 2</span>
+                    <span class="meta-item">ðŸ† ThÃ nh tá»±u: JSE Certification</span>
                 </div>
             </div>
             
             <div class="post-featured-image container" style="margin-top: 2rem;">
-                <img src="assets/img/blog5-featured.jpg" alt="Object Oriented Programming in JavaScript" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <img src="assets/img/blog9-featured.jpg" alt="HoÃ n thÃ nh khÃ³a há»c JavaScript Essentials Cisco" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
         </section>
 
@@ -47,42 +47,45 @@
             <div class="container post-content-layout">
                 
                 <aside class="post-toc">
-                    <h4>Ná»™i dung bÃ i viáº¿t</h4>
+                    <h4>Ná»™i dung tá»•ng káº¿t</h4>
                     <ul>
-                        <li><a href="#class-object">1. Class & Object: Báº£n thiáº¿t káº¿ vÃ  NgÃ´i nhÃ </a></li>
-                        <li><a href="#encapsulation">2. TÃ­nh Ä‘Ã³ng gÃ³i: Giá»¯ bÃ­ máº­t cho dá»¯ liá»‡u</a></li>
-                        <li><a href="#inheritance">3. TÃ­nh káº¿ thá»«a: "Cha truyá»n con ná»‘i" trong Code</a></li>
-                        <li><a href="#prototype">4. Prototype: BÃ­ máº­t Ä‘áº±ng sau diá»‡n máº¡o cá»§a JS</a></li>
-                        <li><a href="#ket-luan">5. Cáº£m nháº­n: Khi láº­p trÃ¬nh trá»Ÿ nÃªn thá»±c táº¿ hÆ¡n</a></li>
+                        <li><a href="#nhin-lai">1. NhÃ¬n láº¡i hÃ nh trÃ¬nh 1 thÃ¡ng vá»«a qua</a></li>
+                        <li><a href="#chung-chi">2. Kinh nghiá»‡m "vÆ°á»£t vÅ© mÃ´n" ká»³ thi Cisco</a></li>
+                        <li><a href="#tu-duy">3. Sá»± thay Ä‘á»•i tÆ° duy: Tá»« Coder sang Developer</a></li>
+                        <li><a href="#next-steps">4. BÆ°á»›c tiáº¿p theo: NÃªn há»c gÃ¬ tiáº¿p theo?</a></li>
                     </ul>
                 </aside>
 
                 <article class="post-body">
                     
-                    <h2 id="class-object">1. Class & Object: Báº£n thiáº¿t káº¿ vÃ  NgÃ´i nhÃ </h2>
-                    <p>Trong khÃ³a há»c Cisco Essentials 2, mÃ¬nh báº¯t Ä‘áº§u tiáº¿p cáº­n vá»›i khÃ¡i niá»‡m <strong>Class</strong>. Náº¿u trÆ°á»›c Ä‘Ã¢y mÃ¬nh táº¡o tá»«ng Ä‘á»‘i tÆ°á»£ng sinh viÃªn riÃªng láº», thÃ¬ nay mÃ¬nh táº¡o ra má»™t "báº£n thiáº¿t káº¿" chung.</p>
-                    <p>HÃ£y tÆ°á»Ÿng tÆ°á»£ng <strong>Class</strong> lÃ  má»™t báº£n váº½ ká»¹ thuáº­t cá»§a má»™t ngÃ´i nhÃ , vÃ  <strong>Object</strong> chÃ­nh lÃ  nhá»¯ng ngÃ´i nhÃ  thá»±c sá»± Ä‘Æ°á»£c xÃ¢y nÃªn tá»« báº£n váº½ Ä‘Ã³. ChÃºng cÃ³ cÃ¹ng cáº¥u trÃºc nhÆ°ng mÃ u sÆ¡n hoáº·c ná»™i tháº¥t (dá»¯ liá»‡u) cÃ³ thá»ƒ khÃ¡c nhau.</p>
+                    <h2 id="nhin-lai">1. NhÃ¬n láº¡i hÃ nh trÃ¬nh 2 thÃ¡ng vá»«a qua</h2>
+                    <p>ChÃ o cÃ¡c báº¡n, váº­y lÃ  series 9 bÃ i blog cá»§a mÃ¬nh vá» JavaScript Essentials Ä‘Ã£ Ä‘i tá»›i há»“i káº¿t. Tá»« nhá»¯ng bá»¡ ngá»¡ vá» <code>let</code>, <code>const</code> á»Ÿ BÃ i 1, cho Ä‘áº¿n viá»‡c xá»­ lÃ½ báº¥t Ä‘á»“ng bá»™ phá»©c táº¡p á»Ÿ BÃ i 7, mÃ¬nh nháº­n ra ráº±ng: <strong>Há»c bÃ i báº£n lÃ  con Ä‘Æ°á»ng ngáº¯n nháº¥t Ä‘á»ƒ Ä‘i xa.</strong></p>
+                    <p>KhÃ³a há»c cá»§a Cisco khÃ´ng chá»‰ dáº¡y mÃ¬nh cÃº phÃ¡p, mÃ  dáº¡y mÃ¬nh cÃ¡ch mÃ¡y tÃ­nh váº­n hÃ nh, cÃ¡ch quáº£n lÃ½ bá»™ nhá»› vÃ  cÃ¡ch tÆ° duy logic má»™t cÃ¡ch há»‡ thá»‘ng.</p>
+
+                    <h2 id="chung-chi">2. Kinh nghiá»‡m "vÆ°á»£t vÅ© mÃ´n" ká»³ thi Cisco</h2>
+                    <p>Äá»ƒ nháº­n Ä‘Æ°á»£c Badge xanh cá»§a Cisco, mÃ¬nh Ä‘Ã£ pháº£i tráº£i qua ká»³ thi cuá»‘i khÃ³a khÃ¡ cÄƒng tháº³ng. Lá»i khuyÃªn cá»§a mÃ¬nh dÃ nh cho cÃ¡c báº¡n sinh viÃªn lÃ :</p>
+                    <ul>
+                        <li><strong>Äá»«ng bá» qua bÃ i Lab:</strong> Nhá»¯ng cÃ¢u há»i trong Ä‘á» thi bÃ¡m ráº¥t sÃ¡t vÃ o viá»‡c thá»±c hÃ nh.</li>
+                        <li><strong>Hiá»ƒu rÃµ Scope vÃ  Closure:</strong> ÄÃ¢y lÃ  nhá»¯ng pháº§n cá»±c ká»³ dá»… máº¥t Ä‘iá»ƒm náº¿u báº¡n chá»‰ há»c váº¹t.</li>
+                        <li><strong>Ã”n ká»¹ OOP:</strong> Pháº§n Essentials 2 táº­p trung ráº¥t nhiá»u vÃ o Class vÃ  káº¿ thá»«a.</li>
+                    </ul>
 
                     
 
-                    <h2 id="encapsulation">2. TÃ­nh Ä‘Ã³ng gÃ³i: Giá»¯ bÃ­ máº­t cho dá»¯ liá»‡u</h2>
-                    <p>CÃ³ má»™t Ä‘iá»u mÃ¬nh cá»±c tÃ¢m Ä‘áº¯c khi há»c OOP lÃ  <strong>Encapsulation (TÃ­nh Ä‘Ã³ng gÃ³i)</strong>. NÃ³ giÃºp mÃ¬nh che giáº¥u nhá»¯ng logic phá»©c táº¡p bÃªn trong vÃ  chá»‰ Ä‘Æ°a ra nhá»¯ng cÃ¡i "nÃºt" Ä‘Æ¡n giáº£n cho ngÆ°á»i dÃ¹ng sá»­ dá»¥ng. </p>
-                    <p>Giá»‘ng nhÆ° viá»‡c báº¡n lÃ¡i xe Ã´ tÃ´, báº¡n chá»‰ cáº§n biáº¿t Ä‘áº¡p ga vÃ  phanh, cÃ²n viá»‡c Ä‘á»™ng cÆ¡ Ä‘á»‘t xÄƒng tháº¿ nÃ o thÃ¬ Ä‘Ã£ Ä‘Æ°á»£c "Ä‘Ã³ng gÃ³i" ká»¹ cÃ ng dÆ°á»›i náº¯p capo. Äiá»u nÃ y giÃºp code cá»§a mÃ¬nh an toÃ n vÃ  dá»… báº£o trÃ¬ hÆ¡n ráº¥t nhiá»u.</p>
+                    <h2 id="tu-duy">3. Sá»± thay Ä‘á»•i tÆ° duy: Tá»« Coder sang Developer</h2>
+                    <p>TrÆ°á»›c Ä‘Ã¢y mÃ¬nh chá»‰ lÃ  má»™t ngÆ°á»i "biáº¿t code" â€“ tá»©c lÃ  ai báº£o gÃ¬ viáº¿t náº¥y. Sau khÃ³a há»c nÃ y, mÃ¬nh cáº£m tháº¥y mÃ¬nh Ä‘ang trá»Ÿ thÃ nh má»™t "nhÃ  phÃ¡t triá»ƒn" (Developer). MÃ¬nh báº¯t Ä‘áº§u biáº¿t lo láº¯ng vá» hiá»‡u nÄƒng, vá» viá»‡c xá»­ lÃ½ lá»—i sao cho á»©ng dá»¥ng khÃ´ng cháº¿t, vÃ  vá» viá»‡c viáº¿t code sao cho ngÆ°á»i sau Ä‘á»c váº«n hiá»ƒu Ä‘Æ°á»£c.</p>
 
-                    <h2 id="inheritance">3. TÃ­nh káº¿ thá»«a: "Cha truyá»n con ná»‘i" trong Code</h2>
-                    <p><strong>Inheritance (TÃ­nh káº¿ thá»«a)</strong> lÃ  má»™t phÃ©p mÃ u giÃºp sinh viÃªn chÃºng mÃ¬nh bá»›t pháº£i gÃµ code láº¡i tá»« Ä‘áº§u. VÃ­ dá»¥: MÃ¬nh cÃ³ má»™t Class <code>Nguoi</code>, sau Ä‘Ã³ mÃ¬nh táº¡o thÃªm Class <code>SinhVien</code> káº¿ thá»«a tá»« <code>Nguoi</code>. </p>
-                    <p>Táº¥t cáº£ nhá»¯ng thuá»™c tÃ­nh nhÆ° tÃªn, tuá»•i, ngÃ y sinh khÃ´ng cáº§n pháº£i viáº¿t láº¡i ná»¯a. <code>SinhVien</code> máº·c nhiÃªn cÃ³ háº¿t vÃ  chá»‰ viá»‡c thÃªm vÃ o nhá»¯ng thá»© riÃªng biá»‡t nhÆ° <code>maSinhVien</code> hay <code>diemGPA</code>. Cá»±c ká»³ tiá»‡n lá»£i!</p>
+                    <h2 id="next-steps">4. BÆ°á»›c tiáº¿p theo: NÃªn há»c gÃ¬ tiáº¿p theo?</h2>
+                    <p>Chá»©ng chá»‰ JSE (JavaScript Essentials) má»›i chá»‰ lÃ  Ä‘iá»ƒm báº¯t Ä‘áº§u. Äá»ƒ thá»±c sá»± Ä‘i lÃ m Ä‘Æ°á»£c, chÃºng ta cáº§n chá»n cho mÃ¬nh má»™t hÆ°á»›ng Ä‘i chuyÃªn sÃ¢u:</p>
+                    <ul>
+                        <li><strong>Front-end:</strong> Tiáº¿p tá»¥c vá»›i <strong>React</strong> hoáº·c <strong>Vue.js</strong>. Báº¡n Ä‘Ã£ cÃ³ ná»n táº£ng DOM vá»¯ng cháº¯c á»Ÿ BÃ i 8 rá»“i, viá»‡c há»c Framework sáº½ nhanh hÆ¡n ráº¥t nhiá»u.</li>
+                        <li><strong>Back-end:</strong> Thá»­ sá»©c vá»›i <strong>Node.js</strong> vÃ  <strong>Express</strong>. ToÃ n bá»™ kiáº¿n thá»©c vá» Async/Await á»Ÿ BÃ i 7 sáº½ lÃ  "vÅ© khÃ­" cá»±c máº¡nh cá»§a báº¡n á»Ÿ Ä‘Ã¢y.</li>
+                        <li><strong>Mobile:</strong> KhÃ¡m phÃ¡ <strong>React Native</strong> Ä‘á»ƒ xÃ¢y dá»±ng á»©ng dá»¥ng trÃªn cáº£ iOS vÃ  Android.</li>
+                    </ul>
 
                     
 
-                    <h2 id="prototype">4. Prototype: BÃ­ máº­t Ä‘áº±ng sau diá»‡n máº¡o cá»§a JS</h2>
-                    <p>DÃ¹ dÃ¹ng <code>class</code> trÃ´ng ráº¥t giá»‘ng Java hay C#, nhÆ°ng Cisco chá»‰ ra ráº±ng báº£n cháº¥t JavaScript váº«n lÃ  <strong>Prototype-based</strong>. Ban Ä‘áº§u mÃ¬nh hÆ¡i "lÃº" chá»— nÃ y, nhÆ°ng sau vÃ i bÃ i Lab, mÃ¬nh nháº­n ra Prototype chÃ­nh lÃ  cÆ¡ cháº¿ mÃ  cÃ¡c Ä‘á»‘i tÆ°á»£ng "mÆ°á»£n" phÆ°Æ¡ng thá»©c cá»§a nhau. </p>
-                    <p>Hiá»ƒu Ä‘Æ°á»£c Prototype lÃ  báº¡n Ä‘Ã£ náº¯m Ä‘Æ°á»£c "linh há»“n" cá»§a JavaScript, giÃºp báº¡n giáº£i thÃ­ch Ä‘Æ°á»£c táº¡i sao má»i thá»© trong JS Ä‘á»u cÃ³ thá»ƒ coi lÃ  má»™t Ä‘á»‘i tÆ°á»£ng.</p>
-
-                    <h2 id="ket-luan">5. Cáº£m nháº­n: Khi láº­p trÃ¬nh trá»Ÿ nÃªn thá»±c táº¿ hÆ¡n</h2>
-                    <p>Káº¿t thÃºc chÆ°Æ¡ng vá» OOP, mÃ¬nh tháº¥y cÃ¡ch mÃ¬nh nhÃ¬n nháº­n má»™t bÃ i toÃ¡n Ä‘Ã£ thay Ä‘á»•i. Thay vÃ¬ nghÄ©: "BÆ°á»›c 1 lÃ m gÃ¬, bÆ°á»›c 2 lÃ m gÃ¬", mÃ¬nh sáº½ nghÄ©: "Há»‡ thá»‘ng nÃ y cÃ³ nhá»¯ng thá»±c thá»ƒ nÃ o, chÃºng tÆ°Æ¡ng tÃ¡c vá»›i nhau ra sao?". </p>
-                    <p>TÆ° duy hÆ°á»›ng Ä‘á»‘i tÆ°á»£ng khÃ´ng chá»‰ giÃºp mÃ¬nh pass bÃ i thi cá»§a Cisco mÃ  cÃ²n lÃ  ná»n táº£ng Ä‘á»ƒ sau nÃ y mÃ¬nh há»c cÃ¡c Framework nhÆ° <strong>React</strong> hay <strong>Angular</strong> má»™t cÃ¡ch dá»… dÃ ng hÆ¡n.</p>
-                    <p>Háº¹n gáº·p láº¡i cÃ¡c báº¡n á»Ÿ BÃ i 6, nÆ¡i chÃºng ta sáº½ há»c cÃ¡ch Ä‘á»‘i máº·t vá»›i nhá»¯ng "vá»‹ khÃ¡ch khÃ´ng má»i" trong code: <strong>Xá»­ lÃ½ lá»—i vÃ  Exception!</strong></p>
+                    <p>Cáº£m Æ¡n cÃ¡c báº¡n Ä‘Ã£ luÃ´n theo dÃµi vÃ  á»§ng há»™ series nÃ y cá»§a mÃ¬nh. Äá»«ng bao giá» ngá»«ng há»c há»i, vÃ¬ tháº¿ giá»›i cÃ´ng nghá»‡ luÃ´n váº­n Ä‘á»™ng má»—i ngÃ y!</p>
 
                 </article>
             </div>
@@ -90,15 +93,14 @@
 
         <section id="post-footer" class="section-padding bg-light">
             <div class="container">
-                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #673ab7;">
-                    <h4>ðŸ‘¨â€ðŸŽ“ Nháº­t kÃ½ cá»§a Äáº¡t</h4>
-                    <p>OOP cÃ³ thá»ƒ hÆ¡i khÃ³ nuá»‘t lÃºc Ä‘áº§u, nhÆ°ng má»™t khi Ä‘Ã£ "tháº¥m", báº¡n sáº½ tháº¥y nÃ³ cá»±c ká»³ logic. Báº¡n tháº¥y tÃ­nh cháº¥t nÃ o cá»§a OOP lÃ  thÃº vá»‹ nháº¥t? HÃ£y Ä‘á»ƒ láº¡i bÃ¬nh luáº­n nhÃ©!</p>
+                <div class="author-bio-box" style="background: white; padding: 30px; border-radius: 12px; border-top: 5px solid #ffc107;">
+                    <h4>ðŸŽ¯ Lá»i nháº¯n cuá»‘i cÃ¹ng</h4>
+                    <p>Series nÃ y khÃ©p láº¡i nhÆ°ng hÃ nh trÃ¬nh cá»§a chÃºng ta thÃ¬ khÃ´ng. Náº¿u báº¡n cÃ³ báº¥t ká»³ cÃ¢u há»i nÃ o vá» lá»™ trÃ¬nh há»c hay ká»³ thi cá»§a Cisco, hÃ£y káº¿t ná»‘i vá»›i mÃ¬nh qua LinkedIn nhÃ©. ChÃºc cÃ¡c báº¡n sá»›m trá»Ÿ thÃ nh nhá»¯ng Developer thá»±c thá»¥!</p>
                 </div>
                 
-                <div class="next-post-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
-                    <a href="Blog4.html" style="text-decoration: none; color: #666;">â† BÃ i 4: HÃ m (Function)</a>
-                    <a href="Blog6.html" style="background: #673ab7; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
-                        Tiáº¿p theo: BÃ i 6 - Xá»­ lÃ½ lá»—i &rarr;
+                <div class="next-post-nav" style="margin-top: 3rem; text-align: center;">
+                    <a href="index.html" class="btn btn-primary" style="padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700;">
+                        Quay láº¡i Trang Chá»§ & KhÃ¡m phÃ¡ Dá»± Ã¡n má»›i
                     </a>
                 </div>
             </div>
@@ -115,6 +117,7 @@
             </div>
         </div>
     </footer>
+    
     <script>
     // Chá»n pháº§n tá»­ cÃ³ class lÃ  'logo'
     const logoElement = document.querySelector('.logo');
